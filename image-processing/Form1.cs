@@ -56,5 +56,14 @@ namespace image_processing {
             processedImage = ImageProcessing.colorInversion(baseImage);
             pictureBox2.Image = processedImage;
         }
+
+        private void histogramToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (baseImage == null) {
+                ImageProcessing.displayError();
+                return;
+            }
+            processedImage = ImageProcessing.histogram(baseImage);
+            pictureBox2.Image = processedImage;
+        }
     }
 }

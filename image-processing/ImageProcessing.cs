@@ -58,5 +58,35 @@ namespace image_processing {
             }
             return processedImage;
         }
+
+        static public Bitmap histogram(Bitmap baseImage) {
+            int width = baseImage.Width;
+            int height = baseImage.Height;
+            Bitmap greyImage = greyScale(baseImage);
+
+            Color pixel;
+            int[] histogramData = new int[256];
+            for (int x = 0; x < width; x++) {
+                for (int y = 0; y < height; y++) {
+                    pixel = greyImage.GetPixel(x, y);
+                    histogramData[pixel.R]++;
+                }
+            }
+
+            // set the bg to white
+            Bitmap processedImage = new Bitmap(256, height);
+            for (int x = 0; x < 256; x++) {
+                for (int y = 0; y < height; y++) {
+                    processedImage.SetPixel(x, y, Color.White);
+                }
+            }
+            // plot the data
+            for (int x = 0; x < 256; x++) {
+                for (int y = 0; y < Math.Min(histogramData[x] / 5, height); y++) {
+                    processedImage.SetPixel(x, height - 1 - y, Color.Black);
+                }
+            }
+            return processedImage;
+        }
     }
 }
