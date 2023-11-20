@@ -88,7 +88,7 @@ namespace image_processing {
             this.imageProcessingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1029, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1029, 33);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,7 +123,7 @@ namespace image_processing {
             this.histogramToolStripMenuItem,
             this.sepiaToolStripMenuItem});
             this.imageProcessingToolStripMenuItem.Name = "imageProcessingToolStripMenuItem";
-            this.imageProcessingToolStripMenuItem.Size = new System.Drawing.Size(168, 32);
+            this.imageProcessingToolStripMenuItem.Size = new System.Drawing.Size(168, 29);
             this.imageProcessingToolStripMenuItem.Text = "Image Processing";
             // 
             // copyToolStripMenuItem
@@ -143,8 +143,9 @@ namespace image_processing {
             // colorInversionToolStripMenuItem
             // 
             this.colorInversionToolStripMenuItem.Name = "colorInversionToolStripMenuItem";
-            this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.colorInversionToolStripMenuItem.Text = "Color Inversion";
+            this.colorInversionToolStripMenuItem.Click += new System.EventHandler(this.colorInversionToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 

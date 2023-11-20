@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace image_processing {
@@ -31,30 +26,35 @@ namespace image_processing {
                 baseImage = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = baseImage;
             } catch {
-                MessageBox.Show("You did not select an image", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ImageProcessing.displayError();
             }
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e) {
             if (baseImage == null) {
-                MessageBox.Show("Base image does not exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ImageProcessing.displayError();
                 return;
             }
-            int width = baseImage.Width;
-            int height = baseImage.Height;
-
-            processedImage = new Bitmap(width, height);
-            for (int x = 0; x < width; x++) {
-                for (int y = 0; y < height; y++) {
-                    Color pixel = baseImage.GetPixel(x, y);
-                    processedImage.SetPixel(x, y, pixel);
-                }
-            }
+            processedImage = ImageProcessing.basicCopy(baseImage);
             pictureBox2.Image = processedImage;
         }
 
         private void greyscaleToolStripMenuItem1_Click(object sender, EventArgs e) {
+            if (baseImage == null) {
+                ImageProcessing.displayError();
+                return;
+            }
+            processedImage = ImageProcessing.greyScale(baseImage);
+            pictureBox2.Image = processedImage;
+        }
 
+        private void colorInversionToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (baseImage == null) {
+                ImageProcessing.displayError();
+                return;
+            }
+            processedImage = ImageProcessing.colorInversion(baseImage);
+            pictureBox2.Image = processedImage;
         }
     }
 }
