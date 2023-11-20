@@ -88,5 +88,25 @@ namespace image_processing {
             }
             return processedImage;
         }
+
+        static public Bitmap sepia(Bitmap baseImage) {
+            int width = baseImage.Width;
+            int height = baseImage.Height;
+            Bitmap processedImage = new Bitmap(width, height);
+
+            for (int x = 0; x < width; x++) {
+                for (int y = 0; y < height; y++) {
+                    Color pixel = baseImage.GetPixel(x, y);
+                    int R = pixel.R;
+                    int G = pixel.G;
+                    int B = pixel.B;
+                    int _R = Math.Min(255, (int)(0.393 * R + 0.769 * G + 0.189 * B));
+                    int _G = Math.Min(255, (int)(0.349 * R + 0.686 * G + 0.168 * B));
+                    int _B = Math.Min(255, (int)(0.272 * R + 0.534 * G + 0.131 * B));
+                    processedImage.SetPixel(x, y, Color.FromArgb(_R, _G, _B));
+                }
+            }
+            return processedImage;
+        }
     }
 }

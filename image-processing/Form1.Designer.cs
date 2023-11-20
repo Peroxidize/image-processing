@@ -79,6 +79,10 @@ namespace image_processing {
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
@@ -98,7 +102,7 @@ namespace image_processing {
             this.openImageToolStripMenuItem,
             this.saveImageToolStripMenuItem2});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openImageToolStripMenuItem
@@ -111,8 +115,9 @@ namespace image_processing {
             // saveImageToolStripMenuItem2
             // 
             this.saveImageToolStripMenuItem2.Name = "saveImageToolStripMenuItem2";
-            this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(213, 34);
+            this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
             this.saveImageToolStripMenuItem2.Text = "Save Image";
+            this.saveImageToolStripMenuItem2.Click += new System.EventHandler(this.saveImageToolStripMenuItem2_Click);
             // 
             // imageProcessingToolStripMenuItem
             // 
@@ -157,8 +162,9 @@ namespace image_processing {
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.sepiaToolStripMenuItem.Text = "Sepia";
+            this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
             // Form1
             // 
