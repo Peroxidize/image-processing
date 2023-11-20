@@ -1,0 +1,10 @@
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\image-processing.exe.config
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\image-processing.exe
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\image-processing.pdb
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.csproj.AssemblyReference.cache
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image_processing.Form1.resources
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image_processing.Properties.Resources.resources
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.csproj.GenerateResource.cache
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.csproj.CoreCompileInputs.cache
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.exe
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.pdb
