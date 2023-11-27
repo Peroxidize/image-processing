@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
+using WebCamLib;
 
 namespace image_processing {
     public partial class Form1 : Form {
@@ -11,6 +11,8 @@ namespace image_processing {
         Bitmap processedImage;
         Bitmap subtractedImage;
         String baseFileName, baseFileExtension;
+        Device[] devices;
+        Device selectedDevice;
 
         public Form1() {
             InitializeComponent();
@@ -159,6 +161,8 @@ namespace image_processing {
             pictureBox3.Image = subtractedImage;
         }
 
+        private void cameraToolStripMenuItem_Click(object sender, EventArgs e) {}
+
         private void saveImage(ref Bitmap image) {
             if (image == null) {
                 MessageBox.Show("Image does not exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -177,5 +181,33 @@ namespace image_processing {
                 MessageBox.Show("Error: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void onToolStripMenuItem_Click(object sender, EventArgs e) {
+            // on camera
+            devices = DeviceManager.GetAllDevices();
+
+            if (devices.Length > 0) {
+                selectedDevice = DeviceManager.GetDevice(0);
+                selectedDevice.ShowWindow(pictureBox1);
+            } else {
+                MessageBox.Show("No webcam device found.");
+            }
+        }
+
+        private void offToolStripMenuItem_Click(object sender, EventArgs e) {
+            // off camera
+            if (selectedDevice != null) {
+                selectedDevice.Stop();
+            } else {
+                MessageBox.Show("No webcam devices found.");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e) {
+
+        }
+
+        private void outputToolStripMenuItem_Click(object sender, EventArgs e) { }
+
     }
 }

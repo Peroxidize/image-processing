@@ -8,3 +8,10 @@ C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\
 C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.csproj.CoreCompileInputs.cache
 C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.exe
 C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.pdb
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\AForge.dll
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\AForge.Video.dll
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\AForge.xml
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\AForge.Video.xml
+C:\Users\mario\source\repos\digital-image-processing\image-processing\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\mario\source\repos\digital-image-processing\image-processing\obj\Debug\image-processing.csproj.CopyComplete
