@@ -41,9 +41,11 @@ namespace image_processing {
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.processedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subtractedpb3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picturebox1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picturebox2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -90,6 +92,7 @@ namespace image_processing {
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -111,15 +114,21 @@ namespace image_processing {
             // 
             // openImageToolStripMenuItem
             // 
+            this.openImageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.picturebox1ToolStripMenuItem,
+            this.picturebox2ToolStripMenuItem});
             this.openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
-            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
+            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.openImageToolStripMenuItem.Text = "Open Image";
             this.openImageToolStripMenuItem.Click += new System.EventHandler(this.openImageToolStripMenuItem_Click);
             // 
             // saveImageToolStripMenuItem2
             // 
+            this.saveImageToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.processedToolStripMenuItem,
+            this.subtractedpb3ToolStripMenuItem});
             this.saveImageToolStripMenuItem2.Name = "saveImageToolStripMenuItem2";
-            this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(213, 34);
+            this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
             this.saveImageToolStripMenuItem2.Text = "Save Image";
             this.saveImageToolStripMenuItem2.Click += new System.EventHandler(this.saveImageToolStripMenuItem2_Click);
             // 
@@ -130,7 +139,8 @@ namespace image_processing {
             this.greyscaleToolStripMenuItem1,
             this.colorInversionToolStripMenuItem,
             this.histogramToolStripMenuItem,
-            this.sepiaToolStripMenuItem});
+            this.sepiaToolStripMenuItem,
+            this.subtractionToolStripMenuItem});
             this.imageProcessingToolStripMenuItem.Name = "imageProcessingToolStripMenuItem";
             this.imageProcessingToolStripMenuItem.Size = new System.Drawing.Size(168, 29);
             this.imageProcessingToolStripMenuItem.Text = "Image Processing";
@@ -138,35 +148,35 @@ namespace image_processing {
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // greyscaleToolStripMenuItem1
             // 
             this.greyscaleToolStripMenuItem1.Name = "greyscaleToolStripMenuItem1";
-            this.greyscaleToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.greyscaleToolStripMenuItem1.Size = new System.Drawing.Size(234, 34);
             this.greyscaleToolStripMenuItem1.Text = "Greyscale";
             this.greyscaleToolStripMenuItem1.Click += new System.EventHandler(this.greyscaleToolStripMenuItem1_Click);
             // 
             // colorInversionToolStripMenuItem
             // 
             this.colorInversionToolStripMenuItem.Name = "colorInversionToolStripMenuItem";
-            this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.colorInversionToolStripMenuItem.Text = "Color Inversion";
             this.colorInversionToolStripMenuItem.Click += new System.EventHandler(this.colorInversionToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.histogramToolStripMenuItem.Text = "Histogram";
             this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
@@ -179,45 +189,47 @@ namespace image_processing {
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
+            // processedToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(177, 584);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 51);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Load image";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.processedToolStripMenuItem.Name = "processedToolStripMenuItem";
+            this.processedToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.processedToolStripMenuItem.Text = "Processed (pb2)";
+            this.processedToolStripMenuItem.Click += new System.EventHandler(this.processedToolStripMenuItem_Click);
             // 
-            // button2
+            // subtractedpb3ToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(714, 584);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 69);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Load background";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.subtractedpb3ToolStripMenuItem.Name = "subtractedpb3ToolStripMenuItem";
+            this.subtractedpb3ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.subtractedpb3ToolStripMenuItem.Text = "Subtracted (pb3)";
+            this.subtractedpb3ToolStripMenuItem.Click += new System.EventHandler(this.subtractedpb3ToolStripMenuItem_Click);
             // 
-            // button3
+            // picturebox1ToolStripMenuItem
             // 
-            this.button3.Location = new System.Drawing.Point(1238, 584);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 51);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Subtract";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.picturebox1ToolStripMenuItem.Name = "picturebox1ToolStripMenuItem";
+            this.picturebox1ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.picturebox1ToolStripMenuItem.Text = "Picturebox1";
+            this.picturebox1ToolStripMenuItem.Click += new System.EventHandler(this.picturebox1ToolStripMenuItem_Click);
+            // 
+            // picturebox2ToolStripMenuItem
+            // 
+            this.picturebox2ToolStripMenuItem.Name = "picturebox2ToolStripMenuItem";
+            this.picturebox2ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.picturebox2ToolStripMenuItem.Text = "Picturebox2";
+            this.picturebox2ToolStripMenuItem.Click += new System.EventHandler(this.picturebox2ToolStripMenuItem_Click);
+            // 
+            // subtractionToolStripMenuItem
+            // 
+            this.subtractionToolStripMenuItem.Name = "subtractionToolStripMenuItem";
+            this.subtractionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.subtractionToolStripMenuItem.Text = "Subtraction";
+            this.subtractionToolStripMenuItem.Click += new System.EventHandler(this.subtractionToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1543, 696);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1543, 569);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -255,9 +267,11 @@ namespace image_processing {
         private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripMenuItem processedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subtractedpb3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem picturebox1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem picturebox2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subtractionToolStripMenuItem;
     }
 }
 

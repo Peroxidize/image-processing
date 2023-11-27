@@ -20,19 +20,9 @@ namespace image_processing {
 
         }
 
-        private void openImageToolStripMenuItem_Click(object sender, EventArgs e) {
-            openFileDialog1.ShowDialog();
-        }
+        private void openImageToolStripMenuItem_Click(object sender, EventArgs e) {}
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e) {
-            try {
-                baseImage = new Bitmap(openFileDialog1.FileName);
-                pictureBox1.Image = baseImage;
-                setBaseNameExtension(openFileDialog1);
-            } catch {
-                ImageProcessing.displayError();
-            }
-        }
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e) {}
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e) {
             if (baseImage == null) {
@@ -79,23 +69,26 @@ namespace image_processing {
             pictureBox2.Image = processedImage;
         }
 
-        private void saveImageToolStripMenuItem2_Click(object sender, EventArgs e) {
-            if (processedImage == null) {
-                MessageBox.Show("Processed image does not exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            saveFileDialog1.FileName = baseFileName;
-            saveFileDialog1.Filter = "BMP Files (*.bmp)|*.bmp|JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|GIF Files (*.gif)|*.gif|PNG Files (*.png)|*.png|TIFF Files (*.tif;*.tiff)|*.tif;*.tiff|All Files (*.*)|*.*";
-            saveFileDialog1.FilterIndex = getFilterIndex();
-            saveFileDialog1.ShowDialog();
+        private void saveImageToolStripMenuItem2_Click(object sender, EventArgs e) {}
+
+        private void processedToolStripMenuItem_Click(object sender, EventArgs e) {
+            saveImage(ref processedImage);
         }
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e) {
-            processedImage.Save(saveFileDialog1.FileName);
+        private void subtractedpb3ToolStripMenuItem_Click(object sender, EventArgs e) {
+            saveImage(ref subtractedImage);
         }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e) {}
+
+        private void button1_Click(object sender, EventArgs e) {}
+
+        private void button2_Click(object sender, EventArgs e) {}
+
+        private void button3_Click(object sender, EventArgs e) {}
 
         private int getFilterIndex() {
-            switch(baseFileExtension) {
+            switch (baseFileExtension) {
                 case "bmp":
                     return 1;
                     break;
@@ -115,7 +108,6 @@ namespace image_processing {
                     return 6;
             }
         }
-
         private void setBaseNameExtension(OpenFileDialog openFileDialog) {
             string path = openFileDialog.FileName;
             string[] words = path.Split('\\');
@@ -130,24 +122,25 @@ namespace image_processing {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) {
                     image = new Bitmap(openFileDialog.FileName);
                     pictureBox.Image = image;
+                    if (image != baseImage) {
+                        return;
+                    }
                     setBaseNameExtension(openFileDialog);
                 }
-            } catch {
-                MessageBox.Show("Base image does not exists or is not an image", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception e) {
+                MessageBox.Show("Error: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-            // load base image
+        private void picturebox1ToolStripMenuItem_Click(object sender, EventArgs e) {
             openBaseImage(pictureBox1, ref baseImage);
         }
 
-        private void button2_Click(object sender, EventArgs e) {
-            // load background
+        private void picturebox2ToolStripMenuItem_Click(object sender, EventArgs e) {
             openBaseImage(pictureBox2, ref processedImage);
         }
-        private void button3_Click(object sender, EventArgs e) {
-            // subtract
+
+        private void subtractionToolStripMenuItem_Click(object sender, EventArgs e) {
             if (baseImage == null || processedImage == null) {
                 ImageProcessing.displayError();
                 return;
@@ -164,6 +157,25 @@ namespace image_processing {
 
             subtractedImage = ImageProcessing.subtract(baseImage, processedImage);
             pictureBox3.Image = subtractedImage;
+        }
+
+        private void saveImage(ref Bitmap image) {
+            if (image == null) {
+                MessageBox.Show("Image does not exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = baseFileName;
+            saveFileDialog.Filter = "BMP Files (*.bmp)|*.bmp|JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|GIF Files (*.gif)|*.gif|PNG Files (*.png)|*.png|TIFF Files (*.tif;*.tiff)|*.tif;*.tiff|All Files (*.*)|*.*";
+            saveFileDialog.FilterIndex = getFilterIndex();
+
+            try {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                    image.Save(saveFileDialog.FileName);
+                }
+            } catch (Exception e) {
+                MessageBox.Show("Error: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
