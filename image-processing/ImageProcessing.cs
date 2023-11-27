@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading.Tasks;
 
 namespace image_processing {
     static public class ImageProcessing {
@@ -107,6 +102,33 @@ namespace image_processing {
                 }
             }
             return processedImage;
+        }
+
+        static public Bitmap subtract(Bitmap baseImage, Bitmap background) {
+            int baseWidth = baseImage.Width;
+            int baseHeight = baseImage.Height;
+            Bitmap subtractedImage = new Bitmap(baseWidth, baseHeight);
+
+            Color green = Color.FromArgb(0, 255, 0);
+            int greygreen = (green.R + green.G + green.B) / 3;
+            int threshold = 5;
+
+            for (int x = 0; x < baseWidth; x++) {
+                for (int y = 0; y < baseHeight; y++) {
+                    Color basePixel = baseImage.GetPixel(x, y);
+                    Color bgPixel = background.GetPixel(x, y);
+                    int grey = (basePixel.R + basePixel.G + basePixel.B) / 3;
+                    int value = Math.Abs(grey - greygreen);
+
+                    if (value > threshold) {
+                        subtractedImage.SetPixel(x, y, basePixel);
+                    } else {
+                        subtractedImage.SetPixel(x, y, bgPixel);
+                    }
+                }
+            }
+
+            return subtractedImage;
         }
     }
 }

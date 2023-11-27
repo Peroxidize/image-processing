@@ -9,11 +9,12 @@ namespace image_processing {
 
         Bitmap baseImage;
         Bitmap processedImage;
+        Bitmap subtractedImage;
         String baseFileName, baseFileExtension;
 
         public Form1() {
             InitializeComponent();
-            this.Text = "Image Processing";
+            Text = "Image Processing";
         }
         private void Form1_Load(object sender, EventArgs e) {
 
@@ -27,13 +28,7 @@ namespace image_processing {
             try {
                 baseImage = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = baseImage;
-                string path = openFileDialog1.FileName;
-                string[] words = path.Split('\\');
-                words = words[words.Length - 1].Split('.');
-                baseFileExtension = words[words.Length - 1];
-                baseFileName = words[words.Length - 2];
-                Console.WriteLine(baseFileName);
-                Console.WriteLine(baseFileExtension);
+                setBaseNameExtension(openFileDialog1);
             } catch {
                 ImageProcessing.displayError();
             }
@@ -119,6 +114,56 @@ namespace image_processing {
                 default:
                     return 6;
             }
+        }
+
+        private void setBaseNameExtension(OpenFileDialog openFileDialog) {
+            string path = openFileDialog.FileName;
+            string[] words = path.Split('\\');
+            words = words[words.Length - 1].Split('.');
+            baseFileExtension = words[words.Length - 1];
+            baseFileName = words[words.Length - 2];
+        }
+
+        private void openBaseImage(PictureBox pictureBox, ref Bitmap image) {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            try {
+                if (openFileDialog.ShowDialog() == DialogResult.OK) {
+                    image = new Bitmap(openFileDialog.FileName);
+                    pictureBox.Image = image;
+                    setBaseNameExtension(openFileDialog);
+                }
+            } catch {
+                MessageBox.Show("Base image does not exists or is not an image", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            // load base image
+            openBaseImage(pictureBox1, ref baseImage);
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            // load background
+            openBaseImage(pictureBox2, ref processedImage);
+        }
+        private void button3_Click(object sender, EventArgs e) {
+            // subtract
+            if (baseImage == null || processedImage == null) {
+                ImageProcessing.displayError();
+                return;
+            }
+            int baseWidth = baseImage.Width;
+            int baseHeight = baseImage.Height;
+            int bgWidth = processedImage.Width;
+            int bgHeight = processedImage.Height;
+
+            if (baseWidth != bgWidth || baseHeight != bgHeight) {
+                MessageBox.Show("Does not share the same resolution", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            subtractedImage = ImageProcessing.subtract(baseImage, processedImage);
+            pictureBox3.Image = subtractedImage;
         }
     }
 }
