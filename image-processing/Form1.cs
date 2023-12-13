@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using WebCamLib;
+using Touchless.Vision.Camera;
 
 namespace image_processing {
     public partial class Form1 : Form {
@@ -11,15 +11,93 @@ namespace image_processing {
         Bitmap processedImage;
         Bitmap subtractedImage;
         String baseFileName, baseFileExtension;
-        Device[] devices;
-        Device selectedDevice;
+
+        private CameraFrameSource _frameSource;
+        private static Bitmap _latestFrame;
+        private Boolean cameraMode = false;
 
         public Form1() {
             InitializeComponent();
             Text = "Image Processing";
         }
         private void Form1_Load(object sender, EventArgs e) {
+            if (!DesignMode) {
+                // Refresh the list of available cameras
+                comboBoxCameras.Items.Clear();
+                foreach (Camera cam in CameraService.AvailableCameras)
+                    comboBoxCameras.Items.Add(cam);
 
+                if (comboBoxCameras.Items.Count > 0)
+                    comboBoxCameras.SelectedIndex = 0;
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
+            thrashOldCamera();
+        }
+
+        private Camera CurrentCamera {
+            get {
+                return comboBoxCameras.SelectedItem as Camera;
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e) {
+            // Early return if we've selected the current camera
+            if (_frameSource != null && _frameSource.Camera == comboBoxCameras.SelectedItem)
+                return;
+
+            thrashOldCamera();
+            startCapturing();
+            cameraMode = true;
+        }
+
+        private void btnStop_Click(object sender, EventArgs e) {
+            thrashOldCamera();
+            cameraMode = false;
+        }
+        private void thrashOldCamera() {
+            // Trash the old camera
+            if (_frameSource != null) {
+                _frameSource.NewFrame -= OnImageCaptured;
+                _frameSource.Camera.Dispose();
+                setFrameSource(null);
+                pictureBox1.Paint -= new PaintEventHandler(drawLatestImage);
+            }
+        }
+
+        private void startCapturing() {
+            try {
+                Camera c = (Camera)comboBoxCameras.SelectedItem;
+                setFrameSource(new CameraFrameSource(c));
+                //_frameSource.Camera.CaptureWidth = 1280;
+                //_frameSource.Camera.CaptureHeight = 720;
+                //_frameSource.Camera.Fps = 30;
+                _frameSource.NewFrame += OnImageCaptured;
+
+                pictureBox1.Paint += new PaintEventHandler(drawLatestImage);
+                _frameSource.StartFrameCapture();
+            } catch (Exception ex) {
+                comboBoxCameras.Text = "Select A Camera";
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void setFrameSource(CameraFrameSource cameraFrameSource) {
+            if (_frameSource == cameraFrameSource)
+                return;
+
+            _frameSource = cameraFrameSource;
+        }
+        public void OnImageCaptured(Touchless.Vision.Contracts.IFrameSource frameSource, Touchless.Vision.Contracts.Frame frame, double fps) {
+            _latestFrame = frame.Image;
+            pictureBox1.Invalidate();
+        }
+        private void drawLatestImage(object sender, PaintEventArgs e) {
+            if (_latestFrame != null) {
+                // Draw the latest image from the active camera
+                e.Graphics.DrawImage(_latestFrame, 0, 0, _latestFrame.Width, _latestFrame.Height);
+            }
         }
 
         private void openImageToolStripMenuItem_Click(object sender, EventArgs e) {}
@@ -184,23 +262,12 @@ namespace image_processing {
 
         private void onToolStripMenuItem_Click(object sender, EventArgs e) {
             // on camera
-            devices = DeviceManager.GetAllDevices();
-
-            if (devices.Length > 0) {
-                selectedDevice = DeviceManager.GetDevice(0);
-                selectedDevice.ShowWindow(pictureBox1);
-            } else {
-                MessageBox.Show("No webcam device found.");
-            }
+            
         }
 
         private void offToolStripMenuItem_Click(object sender, EventArgs e) {
             // off camera
-            if (selectedDevice != null) {
-                selectedDevice.Stop();
-            } else {
-                MessageBox.Show("No webcam devices found.");
-            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e) {

@@ -92,5 +92,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebCamWrapper\WebCamWrapper.csproj">
+      <Project>{cc5d5149-0092-4508-ac34-2abe1468a1c9}</Project>
+      <Name>WebCamWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

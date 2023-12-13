@@ -46,11 +46,11 @@ namespace image_processing {
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.onToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.offToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBoxCameras = new System.Windows.Forms.ComboBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -97,14 +97,14 @@ namespace image_processing {
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.imageProcessingToolStripMenuItem,
-            this.cameraToolStripMenuItem});
+            this.imageProcessingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1543, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 36);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,21 +123,21 @@ namespace image_processing {
             this.picturebox1ToolStripMenuItem,
             this.picturebox2ToolStripMenuItem});
             this.openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
-            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.openImageToolStripMenuItem.Text = "Load Image";
             this.openImageToolStripMenuItem.Click += new System.EventHandler(this.openImageToolStripMenuItem_Click);
             // 
             // picturebox1ToolStripMenuItem
             // 
             this.picturebox1ToolStripMenuItem.Name = "picturebox1ToolStripMenuItem";
-            this.picturebox1ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.picturebox1ToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
             this.picturebox1ToolStripMenuItem.Text = "Picturebox1";
             this.picturebox1ToolStripMenuItem.Click += new System.EventHandler(this.picturebox1ToolStripMenuItem_Click);
             // 
             // picturebox2ToolStripMenuItem
             // 
             this.picturebox2ToolStripMenuItem.Name = "picturebox2ToolStripMenuItem";
-            this.picturebox2ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.picturebox2ToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
             this.picturebox2ToolStripMenuItem.Text = "Picturebox2";
             this.picturebox2ToolStripMenuItem.Click += new System.EventHandler(this.picturebox2ToolStripMenuItem_Click);
             // 
@@ -147,21 +147,21 @@ namespace image_processing {
             this.processedToolStripMenuItem,
             this.subtractedpb3ToolStripMenuItem});
             this.saveImageToolStripMenuItem2.Name = "saveImageToolStripMenuItem2";
-            this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(208, 34);
             this.saveImageToolStripMenuItem2.Text = "Save Image";
             this.saveImageToolStripMenuItem2.Click += new System.EventHandler(this.saveImageToolStripMenuItem2_Click);
             // 
             // processedToolStripMenuItem
             // 
             this.processedToolStripMenuItem.Name = "processedToolStripMenuItem";
-            this.processedToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.processedToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.processedToolStripMenuItem.Text = "Processed (pb2)";
             this.processedToolStripMenuItem.Click += new System.EventHandler(this.processedToolStripMenuItem_Click);
             // 
             // subtractedpb3ToolStripMenuItem
             // 
             this.subtractedpb3ToolStripMenuItem.Name = "subtractedpb3ToolStripMenuItem";
-            this.subtractedpb3ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.subtractedpb3ToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.subtractedpb3ToolStripMenuItem.Text = "Subtracted (pb3)";
             this.subtractedpb3ToolStripMenuItem.Click += new System.EventHandler(this.subtractedpb3ToolStripMenuItem_Click);
             // 
@@ -220,30 +220,6 @@ namespace image_processing {
             this.subtractionToolStripMenuItem.Text = "Subtraction";
             this.subtractionToolStripMenuItem.Click += new System.EventHandler(this.subtractionToolStripMenuItem_Click);
             // 
-            // cameraToolStripMenuItem
-            // 
-            this.cameraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.onToolStripMenuItem,
-            this.offToolStripMenuItem});
-            this.cameraToolStripMenuItem.Name = "cameraToolStripMenuItem";
-            this.cameraToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
-            this.cameraToolStripMenuItem.Text = "Camera";
-            this.cameraToolStripMenuItem.Click += new System.EventHandler(this.cameraToolStripMenuItem_Click);
-            // 
-            // onToolStripMenuItem
-            // 
-            this.onToolStripMenuItem.Name = "onToolStripMenuItem";
-            this.onToolStripMenuItem.Size = new System.Drawing.Size(221, 34);
-            this.onToolStripMenuItem.Text = "On";
-            this.onToolStripMenuItem.Click += new System.EventHandler(this.onToolStripMenuItem_Click);
-            // 
-            // offToolStripMenuItem
-            // 
-            this.offToolStripMenuItem.Name = "offToolStripMenuItem";
-            this.offToolStripMenuItem.Size = new System.Drawing.Size(221, 34);
-            this.offToolStripMenuItem.Text = "Off";
-            this.offToolStripMenuItem.Click += new System.EventHandler(this.offToolStripMenuItem_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(1037, 65);
@@ -258,12 +234,43 @@ namespace image_processing {
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // comboBoxCameras
+            // 
+            this.comboBoxCameras.FormattingEnabled = true;
+            this.comboBoxCameras.Location = new System.Drawing.Point(12, 578);
+            this.comboBoxCameras.Name = "comboBoxCameras";
+            this.comboBoxCameras.Size = new System.Drawing.Size(245, 28);
+            this.comboBoxCameras.TabIndex = 6;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(263, 569);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(99, 44);
+            this.btnStart.TabIndex = 7;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(368, 569);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(99, 44);
+            this.btnStop.TabIndex = 8;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1543, 569);
+            this.ClientSize = new System.Drawing.Size(1543, 625);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.comboBoxCameras);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -306,10 +313,10 @@ namespace image_processing {
         private System.Windows.Forms.ToolStripMenuItem picturebox1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem picturebox2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subtractionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cameraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem onToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem offToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox comboBoxCameras;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStop;
     }
 }
 
