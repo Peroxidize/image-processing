@@ -46,11 +46,18 @@ namespace image_processing {
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cameraPlacementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picturebox1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.picturebox2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.comboBoxCameras = new System.Windows.Forms.ComboBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.cameraFilterLabel = new System.Windows.Forms.Label();
+            this.comboBoxCameraFilters = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxCamRes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -101,10 +108,11 @@ namespace image_processing {
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.imageProcessingToolStripMenuItem});
+            this.imageProcessingToolStripMenuItem,
+            this.cameraPlacementToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1543, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 33);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -181,44 +189,67 @@ namespace image_processing {
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // greyscaleToolStripMenuItem1
             // 
             this.greyscaleToolStripMenuItem1.Name = "greyscaleToolStripMenuItem1";
-            this.greyscaleToolStripMenuItem1.Size = new System.Drawing.Size(234, 34);
+            this.greyscaleToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.greyscaleToolStripMenuItem1.Text = "Greyscale";
             this.greyscaleToolStripMenuItem1.Click += new System.EventHandler(this.greyscaleToolStripMenuItem1_Click);
             // 
             // colorInversionToolStripMenuItem
             // 
             this.colorInversionToolStripMenuItem.Name = "colorInversionToolStripMenuItem";
-            this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.colorInversionToolStripMenuItem.Text = "Color Inversion";
             this.colorInversionToolStripMenuItem.Click += new System.EventHandler(this.colorInversionToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.histogramToolStripMenuItem.Text = "Histogram";
             this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
             // subtractionToolStripMenuItem
             // 
             this.subtractionToolStripMenuItem.Name = "subtractionToolStripMenuItem";
-            this.subtractionToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.subtractionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.subtractionToolStripMenuItem.Text = "Subtraction";
             this.subtractionToolStripMenuItem.Click += new System.EventHandler(this.subtractionToolStripMenuItem_Click);
+            // 
+            // cameraPlacementToolStripMenuItem
+            // 
+            this.cameraPlacementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.picturebox1ToolStripMenuItem1,
+            this.picturebox2ToolStripMenuItem1});
+            this.cameraPlacementToolStripMenuItem.Name = "cameraPlacementToolStripMenuItem";
+            this.cameraPlacementToolStripMenuItem.Size = new System.Drawing.Size(174, 29);
+            this.cameraPlacementToolStripMenuItem.Text = "Camera Placement";
+            // 
+            // picturebox1ToolStripMenuItem1
+            // 
+            this.picturebox1ToolStripMenuItem1.Name = "picturebox1ToolStripMenuItem1";
+            this.picturebox1ToolStripMenuItem1.Size = new System.Drawing.Size(207, 34);
+            this.picturebox1ToolStripMenuItem1.Text = "Picturebox1";
+            this.picturebox1ToolStripMenuItem1.Click += new System.EventHandler(this.picturebox1ToolStripMenuItem1_Click);
+            // 
+            // picturebox2ToolStripMenuItem1
+            // 
+            this.picturebox2ToolStripMenuItem1.Name = "picturebox2ToolStripMenuItem1";
+            this.picturebox2ToolStripMenuItem1.Size = new System.Drawing.Size(207, 34);
+            this.picturebox2ToolStripMenuItem1.Text = "Picturebox2";
+            this.picturebox2ToolStripMenuItem1.Click += new System.EventHandler(this.picturebox2ToolStripMenuItem1_Click_1);
             // 
             // pictureBox3
             // 
@@ -231,16 +262,19 @@ namespace image_processing {
             // 
             // timer1
             // 
-            this.timer1.Interval = 50;
+            this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // comboBoxCameras
             // 
+            this.comboBoxCameras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCameras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCameras.FormattingEnabled = true;
-            this.comboBoxCameras.Location = new System.Drawing.Point(12, 578);
+            this.comboBoxCameras.Location = new System.Drawing.Point(12, 573);
             this.comboBoxCameras.Name = "comboBoxCameras";
-            this.comboBoxCameras.Size = new System.Drawing.Size(245, 28);
+            this.comboBoxCameras.Size = new System.Drawing.Size(245, 34);
             this.comboBoxCameras.TabIndex = 6;
+            this.comboBoxCameras.SelectedIndexChanged += new System.EventHandler(this.comboBoxCameras_SelectedIndexChanged);
             // 
             // btnStart
             // 
@@ -262,12 +296,59 @@ namespace image_processing {
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // cameraFilterLabel
+            // 
+            this.cameraFilterLabel.AutoSize = true;
+            this.cameraFilterLabel.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cameraFilterLabel.Location = new System.Drawing.Point(520, 575);
+            this.cameraFilterLabel.Name = "cameraFilterLabel";
+            this.cameraFilterLabel.Size = new System.Drawing.Size(160, 26);
+            this.cameraFilterLabel.TabIndex = 9;
+            this.cameraFilterLabel.Text = "Camera Filter";
+            // 
+            // comboBoxCameraFilters
+            // 
+            this.comboBoxCameraFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCameraFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCameraFilters.FormattingEnabled = true;
+            this.comboBoxCameraFilters.Location = new System.Drawing.Point(686, 572);
+            this.comboBoxCameraFilters.Name = "comboBoxCameraFilters";
+            this.comboBoxCameraFilters.Size = new System.Drawing.Size(169, 34);
+            this.comboBoxCameraFilters.TabIndex = 10;
+            this.comboBoxCameraFilters.SelectedIndexChanged += new System.EventHandler(this.comboBoxCameraFilters_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(874, 575);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 26);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Camera Resolution";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // comboBoxCamRes
+            // 
+            this.comboBoxCamRes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCamRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCamRes.FormattingEnabled = true;
+            this.comboBoxCamRes.Location = new System.Drawing.Point(1097, 572);
+            this.comboBoxCamRes.Name = "comboBoxCamRes";
+            this.comboBoxCamRes.Size = new System.Drawing.Size(104, 34);
+            this.comboBoxCamRes.TabIndex = 14;
+            this.comboBoxCamRes.SelectedIndexChanged += new System.EventHandler(this.comboBoxCamRes_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1543, 625);
+            this.Controls.Add(this.comboBoxCamRes);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBoxCameraFilters);
+            this.Controls.Add(this.cameraFilterLabel);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.comboBoxCameras);
@@ -317,6 +398,13 @@ namespace image_processing {
         private System.Windows.Forms.ComboBox comboBoxCameras;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.ToolStripMenuItem cameraPlacementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem picturebox1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem picturebox2ToolStripMenuItem1;
+        private System.Windows.Forms.Label cameraFilterLabel;
+        private System.Windows.Forms.ComboBox comboBoxCameraFilters;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxCamRes;
     }
 }
 
