@@ -39,6 +39,7 @@ namespace image_processing {
             this.saveImageToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.processedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subtractedpb3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageProcessingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.greyscaleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -153,7 +154,8 @@ namespace image_processing {
             // 
             this.saveImageToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.processedToolStripMenuItem,
-            this.subtractedpb3ToolStripMenuItem});
+            this.subtractedpb3ToolStripMenuItem,
+            this.pictureBox3ToolStripMenuItem});
             this.saveImageToolStripMenuItem2.Name = "saveImageToolStripMenuItem2";
             this.saveImageToolStripMenuItem2.Size = new System.Drawing.Size(208, 34);
             this.saveImageToolStripMenuItem2.Text = "Save Image";
@@ -162,16 +164,23 @@ namespace image_processing {
             // processedToolStripMenuItem
             // 
             this.processedToolStripMenuItem.Name = "processedToolStripMenuItem";
-            this.processedToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
-            this.processedToolStripMenuItem.Text = "Processed (pb2)";
+            this.processedToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
+            this.processedToolStripMenuItem.Text = "pictureBox1";
             this.processedToolStripMenuItem.Click += new System.EventHandler(this.processedToolStripMenuItem_Click);
             // 
             // subtractedpb3ToolStripMenuItem
             // 
             this.subtractedpb3ToolStripMenuItem.Name = "subtractedpb3ToolStripMenuItem";
-            this.subtractedpb3ToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
-            this.subtractedpb3ToolStripMenuItem.Text = "Subtracted (pb3)";
+            this.subtractedpb3ToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
+            this.subtractedpb3ToolStripMenuItem.Text = "pictureBox2";
             this.subtractedpb3ToolStripMenuItem.Click += new System.EventHandler(this.subtractedpb3ToolStripMenuItem_Click);
+            // 
+            // pictureBox3ToolStripMenuItem
+            // 
+            this.pictureBox3ToolStripMenuItem.Name = "pictureBox3ToolStripMenuItem";
+            this.pictureBox3ToolStripMenuItem.Size = new System.Drawing.Size(207, 34);
+            this.pictureBox3ToolStripMenuItem.Text = "pictureBox3";
+            this.pictureBox3ToolStripMenuItem.Click += new System.EventHandler(this.pictureBox3ToolStripMenuItem_Click);
             // 
             // imageProcessingToolStripMenuItem
             // 
@@ -262,7 +271,7 @@ namespace image_processing {
             // 
             // timer1
             // 
-            this.timer1.Interval = 30;
+            this.timer1.Interval = 33;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // comboBoxCameras
@@ -405,6 +414,7 @@ namespace image_processing {
         private System.Windows.Forms.ComboBox comboBoxCameraFilters;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxCamRes;
+        private System.Windows.Forms.ToolStripMenuItem pictureBox3ToolStripMenuItem;
     }
 }
 

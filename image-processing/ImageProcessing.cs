@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace image_processing {
@@ -130,5 +131,213 @@ namespace image_processing {
 
             return subtractedImage;
         }
+
+        //**************************************************************
+        //                    Pointer based processing
+        //**************************************************************
+
+        public static bool pointer_GreyScale(Bitmap b) {
+            // GDI+ still lies to us - the return format is BGR, NOT RGB.
+            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+            int stride = bmData.Stride;
+            System.IntPtr Scan0 = bmData.Scan0;
+
+            unsafe {
+                byte* p = (byte*)(void*)Scan0;
+
+                int nOffset = stride - b.Width * 3;
+
+                byte red, green, blue;
+
+                for (int y = 0; y < b.Height; ++y) {
+                    for (int x = 0; x < b.Width; ++x) {
+                        blue = p[0];
+                        green = p[1];
+                        red = p[2];
+
+                        p[0] = p[1] = p[2] = (byte)(.299 * red + .587 * green + .114 * blue);
+
+                        p += 3;  ///very good....
+					}
+                    p += nOffset;
+                }
+            }
+
+            b.UnlockBits(bmData);
+
+            return true;
+        }
+
+        public static bool pointer_ColorInversion(Bitmap b) {
+            // GDI+ still lies to us - the return format is BGR, NOT RGB.
+            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+            int stride = bmData.Stride;
+            System.IntPtr Scan0 = bmData.Scan0;
+
+            unsafe {
+                byte* p = (byte*)(void*)Scan0;
+
+                int nOffset = stride - b.Width * 3;
+
+                byte red, green, blue;
+
+                for (int y = 0; y < b.Height; ++y) {
+                    for (int x = 0; x < b.Width; ++x) {
+                        blue = p[0];
+                        green = p[1];
+                        red = p[2];
+
+                        p[0] = (byte)(255 - blue);
+                        p[1] = (byte)(255 - green);
+                        p[2] = (byte)(255 - red);
+
+                        p += 3;  ///very good....
+					}
+                    p += nOffset;
+                }
+            }
+
+            b.UnlockBits(bmData);
+
+            return true;
+        }
+
+        public static bool pointer_Histogram(Bitmap b) {
+            pointer_GreyScale(b);
+
+            // GDI+ still lies to us - the return format is BGR, NOT RGB.
+            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+            int stride = bmData.Stride;
+            System.IntPtr Scan0 = bmData.Scan0;
+            int[] histogramData = new int[256];
+
+            unsafe {
+                byte* p = (byte*)(void*)Scan0;
+
+                int nOffset = stride - b.Width * 3;
+
+                for (int y = 0; y < b.Height; ++y) {
+                    for (int x = 0; x < b.Width; ++x) {
+                        histogramData[p[0]]++;
+                        p[0] = p[1] = p[2] = 255; // Set pixel to white
+                        p += 3;  ///very good....
+					}
+                    p += nOffset;
+                }
+
+                p = (byte*)(void*)Scan0;
+
+                for (int x = 0; x < 256; ++x) {
+                    for (int y = 0; y < Math.Min(histogramData[x], b.Height); ++y) {
+                        byte* pixel = p + (b.Height - 1 - y) * stride + x * 12;
+                        pixel[0] = pixel[1] = pixel[2] = 0; // Set pixel to black
+                    }
+                }
+            }
+
+            b.UnlockBits(bmData);
+
+            return true;
+        }
+
+        public static bool pointer_Sepia(Bitmap b) {
+            // GDI+ still lies to us - the return format is BGR, NOT RGB.
+            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+            int stride = bmData.Stride;
+            System.IntPtr Scan0 = bmData.Scan0;
+
+            unsafe {
+                byte* p = (byte*)(void*)Scan0;
+
+                int nOffset = stride - b.Width * 3;
+
+                byte red, green, blue;
+
+                for (int y = 0; y < b.Height; ++y) {
+                    for (int x = 0; x < b.Width; ++x) {
+                        blue = p[0];
+                        green = p[1];
+                        red = p[2];
+
+                        //int _R = Math.Min(255, (int)(0.393 * R + 0.769 * G + 0.189 * B));
+                        //int _G = Math.Min(255, (int)(0.349 * R + 0.686 * G + 0.168 * B));
+                        //int _B = Math.Min(255, (int)(0.272 * R + 0.534 * G + 0.131 * B));
+
+                        p[2] = Math.Min((byte)255, 
+                            (byte)(0.393 * red + 0.769 * green + 0.189 * blue));
+                        p[1] = Math.Min((byte)255,
+                            (byte)(0.349 * red + 0.686 * green + 0.168 * blue));
+                        p[0] = Math.Min((byte)255,
+                            (byte)(0.272 * red + 0.534 * green + 0.131 * blue));
+
+                        p += 3;  ///very good....
+					}
+                    p += nOffset;
+                }
+            }
+
+            b.UnlockBits(bmData);
+
+            return true;
+        }
+
+        public static bool pointer_Subtraction(Bitmap b, Bitmap baseImg) {
+            // GDI+ still lies to us - the return format is BGR, NOT RGB.
+            BitmapData baseData = baseImg.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+            int stride = bmData.Stride;
+            System.IntPtr Scan0 = bmData.Scan0;
+            System.IntPtr Scan1 = baseData.Scan0;
+
+            unsafe {
+                byte* p = (byte*)(void*)Scan0;
+                byte* based = (byte*)(void*)Scan1;
+
+                int nOffset = stride - b.Width * 3;
+
+                byte red, green, blue;
+                byte based_red, based_green, based_blue;
+
+                Color _green = Color.FromArgb(0, 255, 0);
+                byte greygreen = (byte) ((_green.R + _green.G + _green.B) / 3);
+                int threshold = 5;
+
+                for (int y = 0; y < b.Height; ++y) {
+                    for (int x = 0; x < b.Width; ++x) {
+                        based_blue = based[0];
+                        based_green = based[1];
+                        based_red = based[2];
+
+                        byte grey = (byte) ((based_blue + based_green + based_red) / 3);
+                        byte value = (byte) Math.Abs(grey - greygreen);
+
+                        if (value > threshold) {
+                            p[0] = based_blue;
+                            p[1] = based_green;
+                            p[2] = based_red;
+                        }
+
+                        p += 3;  ///very good....
+                        based += 3;
+					}
+                    p += nOffset;
+                    based += nOffset;
+                }
+            }
+
+            b.UnlockBits(bmData);
+            baseImg.UnlockBits(baseData);
+
+            return true;
+        }
+
+        //**************************************************************
+        //                 End of pointer based processing
+        //**************************************************************
     }
 }

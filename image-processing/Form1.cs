@@ -1,29 +1,27 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 using Touchless.Vision.Camera;
 
 namespace image_processing {
     public partial class Form1 : Form {
 
-        Bitmap baseImage;
-        Bitmap processedImage;
-        Bitmap subtractedImage;
-        String baseFileName, baseFileExtension;
-
         private CameraFrameSource _frameSource;
         private static Bitmap _latestFrame;
         private PictureBox selectedPicturebox;
         private int camWidth = 1280;
         private int camHeight = 720;
-        private Boolean cameraMode = false;
         private Boolean formLoading = true;
+        private int camera_filter = 0;
+        private SemaphoreSlim threadSemaphore = new SemaphoreSlim(3);
 
         public Form1() {
             InitializeComponent();
             Text = "Image Processing";
         }
+
         private void Form1_Load(object sender, EventArgs e) {
             if (!DesignMode) {
                 // Refresh the list of available cameras
@@ -69,88 +67,83 @@ namespace image_processing {
 
         private void btnStop_Click(object sender, EventArgs e) {
             thrashOldCamera();
-            selectedPicturebox.Image = null;
-            selectedPicturebox.Invalidate();
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (baseImage == null) {
-                ImageProcessing.displayError();
+            if (pictureBox1.Image == null) {
+                showError();
                 return;
             }
-            processedImage = ImageProcessing.basicCopy(baseImage);
-            pictureBox2.Image = processedImage;
+            pictureBox3.Image = ImageProcessing.basicCopy((Bitmap) pictureBox1.Image);
         }
 
         private void greyscaleToolStripMenuItem1_Click(object sender, EventArgs e) {
-            if (baseImage == null) {
-                ImageProcessing.displayError();
+            if (pictureBox1.Image == null) {
+                showError();
                 return;
             }
-            processedImage = ImageProcessing.greyScale(baseImage);
-            pictureBox2.Image = processedImage;
+            pictureBox3.Image = ImageProcessing.greyScale((Bitmap) pictureBox1.Image);
         }
 
         private void colorInversionToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (baseImage == null) {
-                ImageProcessing.displayError();
+            if (pictureBox1.Image == null) {
+                showError();
                 return;
             }
-            processedImage = ImageProcessing.colorInversion(baseImage);
-            pictureBox2.Image = processedImage;
+            pictureBox3.Image = ImageProcessing.colorInversion((Bitmap) pictureBox1.Image);
         }
 
         private void histogramToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (baseImage == null) {
-                ImageProcessing.displayError();
+            if (pictureBox1.Image == null) {
+                showError();
                 return;
             }
-            processedImage = ImageProcessing.histogram(baseImage);
-            pictureBox2.Image = processedImage;
+            pictureBox3.Image = ImageProcessing.histogram((Bitmap) pictureBox1.Image);
         }
 
         private void sepiaToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (baseImage == null) {
-                ImageProcessing.displayError();
+            if (pictureBox1.Image == null) {
+                showError();
                 return;
             }
-            processedImage = ImageProcessing.sepia(baseImage);
-            pictureBox2.Image = processedImage;
-        }
-
-        private void processedToolStripMenuItem_Click(object sender, EventArgs e) {
-            saveImage(ref processedImage);
-        }
-
-        private void subtractedpb3ToolStripMenuItem_Click(object sender, EventArgs e) {
-            saveImage(ref subtractedImage);
-        }
-
-        private void picturebox1ToolStripMenuItem_Click(object sender, EventArgs e) {
-            openBaseImage(pictureBox1, ref baseImage);
-        }
-
-        private void picturebox2ToolStripMenuItem_Click(object sender, EventArgs e) {
-            openBaseImage(pictureBox2, ref processedImage);
+            pictureBox3.Image = ImageProcessing.sepia((Bitmap) pictureBox1.Image);
         }
 
         private void subtractionToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (baseImage == null || processedImage == null) {
-                ImageProcessing.displayError();
+            if (pictureBox1.Image == null || pictureBox2.Image == null) {
+                showError();
                 return;
             }
-            int baseWidth = baseImage.Width;
-            int baseHeight = baseImage.Height;
-            int bgWidth = processedImage.Width;
-            int bgHeight = processedImage.Height;
+            int baseWidth = pictureBox1.Image.Width;
+            int baseHeight = pictureBox1.Image.Height;
+            int bgWidth = pictureBox2.Image.Width;
+            int bgHeight = pictureBox2.Image.Height;
 
             if (baseWidth != bgWidth || baseHeight != bgHeight) {
                 MessageBox.Show("Does not share the same resolution", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            pictureBox3.Image = ImageProcessing.subtract(
+            (Bitmap)pictureBox1.Image, (Bitmap)pictureBox2.Image);
+        }
 
-            subtractedImage = ImageProcessing.subtract(baseImage, processedImage);
-            pictureBox3.Image = subtractedImage;
+        private void processedToolStripMenuItem_Click(object sender, EventArgs e) {
+            saveImage(pictureBox1);
+        }
+
+        private void subtractedpb3ToolStripMenuItem_Click(object sender, EventArgs e) {
+            saveImage(pictureBox2);
+        }
+        private void pictureBox3ToolStripMenuItem_Click(object sender, EventArgs e) {
+            saveImage(pictureBox3);
+        }
+
+        private void picturebox1ToolStripMenuItem_Click(object sender, EventArgs e) {
+            openBaseImage(pictureBox1);
+        }
+
+        private void picturebox2ToolStripMenuItem_Click(object sender, EventArgs e) {
+            openBaseImage(pictureBox2);
         }
 
         private void picturebox1ToolStripMenuItem1_Click(object sender, EventArgs e) {
@@ -184,7 +177,7 @@ namespace image_processing {
             //comboBoxCamRes.Items.Add("480p");
             //comboBoxCamRes.Items.Add("720p");
             //comboBoxCamRes.Items.Add("1080p");
-            if (formLoading) {
+            if (formLoading == true) {
                 return;
             }
             thrashOldCamera();
@@ -217,25 +210,57 @@ namespace image_processing {
             //comboBoxCameraFilters.Items.Add("Histogram");
             //comboBoxCameraFilters.Items.Add("Sepia");
             //comboBoxCameraFilters.Items.Add("Subtraction");
-            if (formLoading) {
-                return;
-            }
-            switch (comboBoxCamRes.SelectedIndex) {
+
+            switch (comboBoxCameraFilters.SelectedIndex) {
                 case 0:
-                    camWidth = 320;
-                    camHeight = 240;
+                    camera_filter = 0;
                     break;
                 case 1:
-                    camWidth = 640;
-                    camHeight = 480;
+                    camera_filter = 1;
                     break;
                 case 2:
-                    camWidth = 1280;
-                    camHeight = 720;
+                    camera_filter = 2;
                     break;
                 case 3:
-                    camWidth = 1920;
-                    camHeight = 1080;
+                    camera_filter = 3;
+                    break;
+                case 4:
+                    camera_filter = 4;
+                    break;
+                case 5:
+                    camera_filter = 5;
+                    break;
+                case 6:
+                    camera_filter = 6;
+                    break;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e) {
+            // TODO
+            //comboBoxCameraFilters.Items.Add("None");
+
+            //comboBoxCameraFilters.Items.Add("Copy");
+            //comboBoxCameraFilters.Items.Add("Greyscale");
+            //comboBoxCameraFilters.Items.Add("Color Inversion");
+            //comboBoxCameraFilters.Items.Add("Histogram");
+            //comboBoxCameraFilters.Items.Add("Sepia");
+            //comboBoxCameraFilters.Items.Add("Subtraction");
+
+            switch (camera_filter) {
+                case 1:
+                    break;
+                case 2:
+                    Console.WriteLine("!TEST");
+                    ImageProcessing.pointer_GreyScale((Bitmap)selectedPicturebox.Image);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
                     break;
             }
         }
@@ -259,8 +284,6 @@ namespace image_processing {
         private void onToolStripMenuItem_Click(object sender, EventArgs e) { }
 
         private void offToolStripMenuItem_Click(object sender, EventArgs e) { }
-
-        private void timer1_Tick(object sender, EventArgs e) { }
 
         private void outputToolStripMenuItem_Click(object sender, EventArgs e) { }
 
@@ -297,9 +320,6 @@ namespace image_processing {
                 setFrameSource(null);
                 selectedPicturebox.Paint -= new PaintEventHandler(drawLatestImage);
             }
-            cameraMode = false;
-            selectedPicturebox.Image = null;
-            selectedPicturebox.Invalidate();
         }
 
         private void startCapturing() {
@@ -308,21 +328,14 @@ namespace image_processing {
                 setFrameSource(new CameraFrameSource(c));
                 _frameSource.Camera.CaptureWidth = camWidth;
                 _frameSource.Camera.CaptureHeight = camHeight;
-                //_frameSource.Camera.Fps = 60;
+                //_frameSource.Camera.Fps = 30;
                 _frameSource.NewFrame += OnImageCaptured;
 
                 selectedPicturebox.Paint += new PaintEventHandler(drawLatestImage);
                 _frameSource.StartFrameCapture();
-                cameraMode = true;
             } catch (Exception ex) {
                 comboBoxCameras.Text = "Select A Camera";
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private Camera CurrentCamera {
-            get {
-                return comboBoxCameras.SelectedItem as Camera;
             }
         }
 
@@ -335,80 +348,114 @@ namespace image_processing {
 
         public void OnImageCaptured(Touchless.Vision.Contracts.IFrameSource frameSource, Touchless.Vision.Contracts.Frame frame, double fps) {
             _latestFrame = frame.Image;
+            selectedPicturebox.Image = _latestFrame;
             selectedPicturebox.Invalidate();
         }
-        
+
         private void drawLatestImage(object sender, PaintEventArgs e) {
             if (_latestFrame != null) {
                 // Draw the latest image from the active camera
                 e.Graphics.DrawImage(_latestFrame, 0, 0, selectedPicturebox.Width, selectedPicturebox.Height);
-                Console.WriteLine(_latestFrame.Width + " " + _latestFrame.Height);
+
+                if (camera_filter == 6) { // check for resolution first
+                    Bitmap baseImg = (Bitmap)pictureBox1.Image.Clone();
+                    Bitmap secondImage = (Bitmap)_latestFrame.Clone();
+                    if (baseImg.Width != secondImage.Width
+                        || baseImg.Height != secondImage.Height) {
+                        comboBoxCameraFilters.SelectedIndex = 0;
+                        MessageBox.Show("Error: " + "Resolution does not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // limit the number of threads to 3
+                if (threadSemaphore.Wait(0)) {
+                    Thread filterThread = new Thread(() =>
+                    {
+                        try {
+                            filterFrames();
+                        } finally {
+                            threadSemaphore.Release();
+                        }
+                    });
+                    filterThread.Start();
+                } else {
+                    // Optionally handle the case when the thread limit is reached
+                    Console.WriteLine("Thread limit reached. Skipping filterFrames.");
+                }
             }
-            Console.WriteLine(camWidth);
-            Console.WriteLine(camHeight);
         }
 
-        private int getFilterIndex() {
-            switch (baseFileExtension) {
-                case "bmp":
-                    return 1;
-                case "jpg":
-                    return 2;
-                case "jpeg":
-                    return 2;
-                case "gif":
-                    return 3;
-                case "png":
-                    return 4;
-                case "tif":
-                    return 5;
-                case "tiff":
-                    return 5;
-                default:
-                    return 6;
+        private void filterFrames() {
+            Bitmap toprocess = (Bitmap)_latestFrame.Clone();
+
+            switch (camera_filter) {
+                case 0:
+                    return;
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    ImageProcessing.pointer_GreyScale(toprocess);
+                    break;
+                case 3:
+                    ImageProcessing.pointer_ColorInversion(toprocess);
+                    break;
+                case 4:
+                    ImageProcessing.pointer_Histogram(toprocess);
+                    break;
+                case 5:
+                    ImageProcessing.pointer_Sepia(toprocess);
+                    break;
+                case 6:
+                    Bitmap baseImg = (Bitmap) pictureBox1.Image.Clone();
+                    ImageProcessing.pointer_Subtraction(toprocess, baseImg);
+                    break;
             }
-        }
-        private void setBaseNameExtension(OpenFileDialog openFileDialog) {
-            string path = openFileDialog.FileName;
-            string[] words = path.Split('\\');
-            words = words[words.Length - 1].Split('.');
-            baseFileExtension = words[words.Length - 1];
-            baseFileName = words[words.Length - 2];
+
+            // Update the UI with the processed frame
+            BeginInvoke((MethodInvoker)delegate
+            {
+                pictureBox3.Image = toprocess; // frame is now processed
+            });
         }
 
-        private void openBaseImage(PictureBox pictureBox, ref Bitmap image) {
+        private Camera CurrentCamera {
+            get {
+                return comboBoxCameras.SelectedItem as Camera;
+            }
+        }
+
+        private void openBaseImage(PictureBox pictureBox) {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             try {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) {
-                    image = new Bitmap(openFileDialog.FileName);
-                    pictureBox.Image = image;
-                    if (image != baseImage) {
-                        return;
-                    }
-                    setBaseNameExtension(openFileDialog);
+                    pictureBox.Image = new Bitmap(openFileDialog.FileName);
                 }
             } catch (Exception e) {
                 MessageBox.Show("Error: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void saveImage(ref Bitmap image) {
-            if (image == null) {
-                MessageBox.Show("Image does not exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void saveImage(PictureBox pictureBox) {
+            if (pictureBox.Image == null) {
+                showError();
                 return;
             }
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.FileName = baseFileName;
-            saveFileDialog.Filter = "BMP Files (*.bmp)|*.bmp|JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|GIF Files (*.gif)|*.gif|PNG Files (*.png)|*.png|TIFF Files (*.tif;*.tiff)|*.tif;*.tiff|All Files (*.*)|*.*";
-            saveFileDialog.FilterIndex = getFilterIndex();
+            saveFileDialog.Filter = "PNG Files (*.png)|*.png|JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg";
 
             try {
                 if (saveFileDialog.ShowDialog() == DialogResult.OK) {
-                    image.Save(saveFileDialog.FileName);
+                    pictureBox.Image.Save(saveFileDialog.FileName);
                 }
             } catch (Exception e) {
                 MessageBox.Show("Error: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void showError() {
+            MessageBox.Show("Error: " + "Picturebox is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //**************************************************************
