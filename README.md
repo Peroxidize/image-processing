@@ -10,7 +10,9 @@ To build this project, you'll need:
 
 ### [C# WebCam](https://github.com/rockstardev/csharpWebCam)
 
-Dependencies  
-├── WebCamLib  
-├── WebCamWrapper  
+File Structure
+├── image-processing (executable shortcut)
+├── image-processing/
+├── WebCamLib/ (dependency)
+├── WebCamWrapper/ (dependency)
   
