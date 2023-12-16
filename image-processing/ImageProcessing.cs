@@ -204,43 +204,36 @@ namespace image_processing {
             return true;
         }
 
-        public static bool pointer_Histogram(Bitmap b) {
-            pointer_GreyScale(b);
+        public static int[] pointer_Histogram(Bitmap b) {
+            int[] result = new int[256];
 
-            // GDI+ still lies to us - the return format is BGR, NOT RGB.
-            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+            BitmapData data = b.LockBits(new Rectangle(Point.Empty, b.Size), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
 
-            int stride = bmData.Stride;
-            System.IntPtr Scan0 = bmData.Scan0;
-            int[] histogramData = new int[256];
+            IntPtr Ptr = data.Scan0;
 
             unsafe {
-                byte* p = (byte*)(void*)Scan0;
-
-                int nOffset = stride - b.Width * 3;
-
-                for (int y = 0; y < b.Height; ++y) {
-                    for (int x = 0; x < b.Width; ++x) {
-                        histogramData[p[0]]++;
-                        p[0] = p[1] = p[2] = 255; // Set pixel to white
-                        p += 3;  ///very good....
-					}
-                    p += nOffset;
-                }
-
-                p = (byte*)(void*)Scan0;
-
-                for (int x = 0; x < 256; ++x) {
-                    for (int y = 0; y < Math.Min(histogramData[x], b.Height); ++y) {
-                        byte* pixel = p + (b.Height - 1 - y) * stride + x * 12;
-                        pixel[0] = pixel[1] = pixel[2] = 0; // Set pixel to black
+                byte* p = (byte*)(void*)Ptr;
+                for (int i = 0; i < b.Width; i++) {
+                    for (int j = 0; j < b.Height; j++) {
+                        // Exclude all transparent pixels
+                        if (p[3] == 0) {
+                            p += 4;
+                            continue;
+                        }
+                        int g = (int)(.299 * p[2] + .587 * p[1] + .114 * p[0]);
+                        if (g > 255) {
+                            g = 255;
+                        }
+                        result[g]++;
+                        p[0] = p[1] = p[2] = 255;
+                        p += 4;
                     }
                 }
             }
 
-            b.UnlockBits(bmData);
+            b.UnlockBits(data);
 
-            return true;
+            return result;
         }
 
         public static bool pointer_Sepia(Bitmap b) {

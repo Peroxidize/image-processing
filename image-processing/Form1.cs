@@ -15,7 +15,8 @@ namespace image_processing {
         private int camHeight = 720;
         private Boolean formLoading = true;
         private int camera_filter = 0;
-        private SemaphoreSlim threadSemaphore = new SemaphoreSlim(3);
+        private SemaphoreSlim threadSemaphore = new SemaphoreSlim(3); // max threads is 3
+        private static bool isDrawing = false;
 
         public Form1() {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace image_processing {
                 if (comboBoxCameras.Items.Count > 0)
                     comboBoxCameras.SelectedIndex = 0;
             }
+
             changePictureBox(ref selectedPicturebox, ref pictureBox1);
 
             comboBoxCameraFilters.Items.Add("None");
@@ -392,7 +394,6 @@ namespace image_processing {
             switch (camera_filter) {
                 case 0:
                     return;
-                    break;
                 case 1:
                     break;
                 case 2:
@@ -402,8 +403,16 @@ namespace image_processing {
                     ImageProcessing.pointer_ColorInversion(toprocess);
                     break;
                 case 4:
-                    ImageProcessing.pointer_Histogram(toprocess);
-                    break;
+                    if (isDrawing) {
+                        return;
+                    }
+                    int[] histogram = ImageProcessing.pointer_Histogram(toprocess);
+                    using (Graphics g = pictureBox3.CreateGraphics()) {
+                        isDrawing = true;
+                        drawHistogram(g, pictureBox3.Size, histogram);
+                        g.Dispose();
+                    }
+                    return;
                 case 5:
                     ImageProcessing.pointer_Sepia(toprocess);
                     break;
@@ -418,6 +427,31 @@ namespace image_processing {
             {
                 pictureBox3.Image = toprocess; // frame is now processed
             });
+        }
+
+        private async void drawHistogram(Graphics g, Size s, int[] data, Color? BarColor = null) {
+            if (BarColor == null) BarColor = Color.Gray;
+            Brush BarBrush = new SolidBrush((Color)BarColor);
+
+            int gap = 0;
+
+            float BarWidth = Math.Max(((float)s.Width / (float)256) - gap, 1);
+            int MaxData = 1;
+
+            // Get Max Height Data
+            for (int i = 0; i < 256; i++) if (data[i] > MaxData) MaxData = data[i];
+
+            // Clear the graphics
+            g.Clear(Control.DefaultBackColor);
+
+            for (int i = 0; i < 256; i++) {
+                float BarHeight = ((float)s.Height * (float)((float)data[i] / (float)MaxData));
+                PointF Location = new PointF(i * (BarWidth + gap), s.Height - BarHeight);
+                SizeF Size = new SizeF(BarWidth, BarHeight);
+                RectangleF Bounds = new RectangleF(Location, Size);
+                g.FillRectangle(BarBrush, Bounds);
+            }
+            isDrawing = false;
         }
 
         private Camera CurrentCamera {
