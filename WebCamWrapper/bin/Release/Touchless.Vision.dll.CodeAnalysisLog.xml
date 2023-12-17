@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Namespaces>
+  <Namespace Name="Touchless.Shared.Extensions">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Touchless.Shared.Extensions' with another namespace.</Issue>
+    </Message>
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Shared.Extensions'.</Issue>
+    </Message>
+    <Message Id="Shared" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Rename namespace Touchless.Shared.Extensions so that it no longer conflicts with the reserved language keyword 'Shared'. Using a reserved keyword as the name of a namespace makes it harder for consumers in other languages to use the namespace.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Touchless.Vision.Camera">
+   <Messages>
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Vision.Camera'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Touchless.Vision.Camera.Configuration">
+   <Messages>
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Vision.Camera.Configuration'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Touchless.Vision.Contracts">
+   <Messages>
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Vision.Contracts'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\Touchless.Vision.dll">
+   <Modules>
+    <Module Name="touchless.vision.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Touchless.Vision.dll' with a strong name key.</Issue>
+      </Message>
+      <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in assembly name 'Touchless.Vision.dll'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'Touchless.Vision.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">Because assembly 'Touchless.Vision.dll' contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Touchless.Shared.Extensions">
+       <Types>
+        <Type Name="Extensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">The type name 'Extensions' conflicts in whole or in part with the namespace name 'Touchless.Shared.Extensions'. Change either name to eliminate the conflict.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#DeleteObject(System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Extensions.DeleteObject(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ForEach`1(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Action`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="17">In externally visible method 'Extensions.ForEach&lt;T&gt;(this IEnumerable&lt;T&gt;, Action&lt;T&gt;)', validate parameter 'items' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="19">In externally visible method 'Extensions.ForEach&lt;T&gt;(this IEnumerable&lt;T&gt;, Action&lt;T&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IfNotNull`1(!!0,System.Action`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="29">In externally visible method 'Extensions.IfNotNull&lt;T&gt;(this T, Action&lt;T&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToBitmapSource(System.Drawing.Bitmap)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Touchless.Shared.Extensions.Extensions.DeleteObject(System.IntPtr)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+             <Issue Name="HResultOrErrorCode" Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="66">'Extensions.ToBitmapSource(this Bitmap)' calls 'Extensions.DeleteObject(IntPtr)' but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="58">In externally visible method 'Extensions.ToBitmapSource(this Bitmap)', validate parameter 'source' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToDrawingPoint(System.Windows.Point)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="44">In method 'Extensions.ToDrawingPoint(this Point)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToWindowsPoint(System.Drawing.Point)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="35">In method 'Extensions.ToWindowsPoint(this Point)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Touchless.Vision">
+       <Types>
+        <Type Name="ExportInterfaceNames" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'ExportInterfaceNames' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Touchless.Vision.Camera">
+       <Types>
+        <Type Name="Camera" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+           <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'Camera' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
+          </Message>
+          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">The type name 'Camera' conflicts in whole or in part with the namespace name 'Touchless.Vision.Camera'. Change either name to eliminate the conflict.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(WebCamLib.CameraMethods,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="520">In externally visible method 'Camera.Camera(CameraMethods, string, int)', validate parameter 'cameraMethods' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CaptureCallbackProc(System.Int32,System.Byte[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="1021">In method 'Camera.CaptureCallbackProc(int, byte[])', call System.IDisposable.Dispose on object 'new Bitmap(this._width, this._height, !stride, PixelFormat.Format24bppRgb, scan0)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="687">Change 'Camera.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            </Message>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="687">Modify 'Camera.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCameraInfo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="722">Change 'Camera.GetCameraInfo()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="861">Correct the casing of 'percentage' in member name 'Camera.GetCameraProperty_percentage(CameraProperty)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="861">Remove the underscores from member name 'Camera.GetCameraProperty_percentage(CameraProperty)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCameraProperty_value(Touchless.Vision.Camera.CameraProperty)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="839">Correct the casing of 'value' in member name 'Camera.GetCameraProperty_value(CameraProperty)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="839">Remove the underscores from member name 'Camera.GetCameraProperty_value(CameraProperty)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCurrentImage()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="706">In method 'Camera.GetCurrentImage()', call System.IDisposable.Dispose on object 'b' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="698">Change 'Camera.GetCurrentImage()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty(Touchless.Vision.Camera.CameraProperty,Touchless.Vision.Camera.CameraPropertyValue)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="745">In externally visible method 'Camera.SetCameraProperty(CameraProperty, CameraPropertyValue)', validate parameter 'value' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="802">Correct the casing of 'percentage' in member name 'Camera.SetCameraProperty_percentage(CameraProperty, bool)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="802">Remove the underscores from member name 'Camera.SetCameraProperty_percentage(CameraProperty, bool)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="808">Correct the casing of 'percentage' in member name 'Camera.SetCameraProperty_percentage(CameraProperty, int)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="808">Remove the underscores from member name 'Camera.SetCameraProperty_percentage(CameraProperty, int)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty,System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="813">Correct the casing of 'percentage' in member name 'Camera.SetCameraProperty_percentage(CameraProperty, int, bool)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="813">Remove the underscores from member name 'Camera.SetCameraProperty_percentage(CameraProperty, int, bool)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty_value(Touchless.Vision.Camera.CameraProperty,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="779">Correct the casing of 'value' in member name 'Camera.SetCameraProperty_value(CameraProperty, bool)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="779">Remove the underscores from member name 'Camera.SetCameraProperty_value(CameraProperty, bool)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty_value(Touchless.Vision.Camera.CameraProperty,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="785">Correct the casing of 'value' in member name 'Camera.SetCameraProperty_value(CameraProperty, int)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="785">Remove the underscores from member name 'Camera.SetCameraProperty_value(CameraProperty, int)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCameraProperty_value(Touchless.Vision.Camera.CameraProperty,System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="790">Correct the casing of 'value' in member name 'Camera.SetCameraProperty_value(CameraProperty, int, bool)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="790">Remove the underscores from member name 'Camera.SetCameraProperty_value(CameraProperty, int, bool)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraFrameSource" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#NewFrame" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Rename 'Action&lt;IFrameSource, Frame, double&gt;' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraProperty" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'CameraProperty' that has a value of zero with a suggested name of 'None'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Exposure_lgSec" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="lg" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'lg' in member name 'CameraProperty.Exposure_lgSec' by changing it to 'LG'.</Issue>
+            </Message>
+            <Message Id="lg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'lg' in member name 'CameraProperty.Exposure_lgSec' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Exposure_lgSec'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FocalLength_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraProperty.FocalLength_mm' by changing it to 'MM'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.FocalLength_mm'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Iris_10f" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="f" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'f' in member name 'CameraProperty.Iris_10f' by changing it to 'F'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Iris_10f'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Pan_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty.Pan_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Pan_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Roll_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty.Roll_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Roll_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Tilt_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty.Tilt_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Tilt_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Zoom_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraProperty.Zoom_mm' by changing it to 'MM'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Zoom_mm'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraPropertyCapabilities" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Since 'CameraPropertyCapabilities' redefines Equals, it should also redefine GetHashCode.</Issue>
+          </Message>
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '!=' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '&lt;' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '==' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '&gt;' since it implements IComparable.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CompareTo(Touchless.Vision.Camera.CameraPropertyCapabilities)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="358">In externally visible method 'CameraPropertyCapabilities.CompareTo(CameraPropertyCapabilities)', validate parameter 'other' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraPropertyRange" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Since 'CameraPropertyRange' redefines Equals, it should also redefine GetHashCode.</Issue>
+          </Message>
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '!=' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '&lt;' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '==' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '&gt;' since it implements IComparable.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CompareTo(Touchless.Vision.Camera.CameraPropertyRange)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="229">In externally visible method 'CameraPropertyRange.CompareTo(CameraPropertyRange)', validate parameter 'other' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraPropertyValue" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Since 'CameraPropertyValue' redefines Equals, it should also redefine GetHashCode.</Issue>
+          </Message>
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '!=' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '&lt;' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '==' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '&gt;' since it implements IComparable.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CompareTo(Touchless.Vision.Camera.CameraPropertyValue)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="109">In externally visible method 'CameraPropertyValue.CompareTo(CameraPropertyValue)', validate parameter 'other' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CaptureSize" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+           <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '!=' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '&lt;' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '==' since it implements IComparable.</Issue>
+           <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '&gt;' since it implements IComparable.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CompareTo(Touchless.Vision.Camera.CaptureSize)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="439">In externally visible method 'CaptureSize.CompareTo(CaptureSize)', validate parameter 'other' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="430">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'CaptureSize.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Touchless.Vision.Camera.Configuration">
+       <Types>
+        <Type Name="CameraFrameSourceConfigurationElement" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#NewFrame(Touchless.Vision.Contracts.IFrameSource,Touchless.Vision.Contracts.Frame,System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Double.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera\Configuration" File="CameraFrameSourceConfigurationElement.xaml.cs" Line="60">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'CameraFrameSourceConfigurationElement.NewFrame(IFrameSource, Frame, double)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Touchless.Vision.Contracts">
+       <Types>
+        <Type Name="Frame" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'Frame' because it creates members of the following IDisposable types: 'Bitmap'. If 'Frame' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#ImageData" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Contracts" File="Frame.cs" Line="44">Change 'Frame.ImageData' to return a collection or make it a method.</Issue>
+            </Message>
+           </Messages>
+           <Accessors>
+            <Accessor Name="#set_ImageData(System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+               <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Contracts" File="Frame.cs" Line="57">Parameter 'value' of 'Frame.ImageData.set(byte[])' is never used. Remove the parameter or use it in the method body.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IFrameSource" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#NewFrame" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IFrameSource, Frame, double&gt;' as an object named 'sender'.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IFrameSource, Frame, double&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+             <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IFrameSource, Frame, double&gt;'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Rename 'Action&lt;IFrameSource, Frame, double&gt;' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IObjectDetector" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FrameProcessed" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;' as an object named 'sender'.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+             <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NewObject" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an object named 'sender'.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+             <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ObjectMoved" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an object named 'sender'.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+             <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ObjectRemoved" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an object named 'sender'.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+             <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ITouchlessAddIn" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in type name 'ITouchlessAddIn'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>Avoid namespaces with few types</Name>
+   <Description>A namespace should generally have more than five types.</Description>
+   <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+   <Name>Avoid uninstantiated internal classes</Name>
+   <Description>An internal class was detected that is apparently never instantiated. This rule does not attempt to detect late-bound creation and will generate false positives if instances of a type are only created in this way (for example, by means of Activator.CreateInstance or by passing the type as an argument to a TypeConverter constructor).</Description>
+   <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182265.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+   <Name>Call GC.SuppressFinalize correctly</Name>
+   <Description>Call GC.SuppressFinalize to suppress finalization of your instance once Dispose has been called. Objects that implement IDisposable should call SuppressFinalize from the IDisposable.Dispose method to prevent the garbage collector from calling Object.Finalize on an object that does not require it.</Description>
+   <Resolution Name="NotCalled">Change {0} to call {1}. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182269.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Declare event handlers correctly</Name>
+   <Description>By convention, .NET events have two parameters that specify the event sender and event data. Event handler signatures should follow this form: void MyEventHandler(object sender, EventArgs e). The 'sender' parameter is always of type System.Object, even if it is possible to employ a more specific type. The 'e' parameter is always of type System.EventArgs. Events that do not provide event data should use the System.EventHandler delegate type. Event handlers return void so that they can send each event to multiple target methods. Any value returned by a target would be lost after the first call.</Description>
+   <Resolution Name="First">Declare the first parameter of {0} as an object named 'sender'.</Resolution>
+   <Resolution Name="Second">Declare the second parameter of {0} as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Resolution>
+   <Resolution Name="TooMany">Remove all but the first two parameters of {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>Do not ignore method results</Name>
+   <Description>The result of methods that return new instances of strings should be assigned to a variable and subsequently used. If the result of a method that creates a new object, such as String.ToLower(), is not assigned to a variable, the call is wasted.</Description>
+   <Resolution Name="HResultOrErrorCode">{0} calls {1} but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+   <Name>Enums should have zero value</Name>
+   <Description>An enum should generally have a zero value. If the enum is not decorated with the Flags attribute, it should have a member with a value of zero that represents the empty state. Optionally, this value is named 'None'. For a Flags-attributed enum, a zero-valued member is optional and, if it exists, should always be named 'None'. This value should indicate that no values have been set in the enum. Using a zero-valued member for other purposes is contrary to the use of the Flags attribute in that the bitwise AND and OR operators are useless with the member.</Description>
+   <Resolution Name="NotFlagsNoZeroValue">Add a member to {0} that has a value of zero with a suggested name of 'None'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182149.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+   <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+   <Name>Identifiers should have correct suffix</Name>
+   <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
+   <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182244.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identifiers should not contain underscores</Name>
+   <Description>Do not use underscores when specifying identifiers. Some generated Visual Studio identifiers for applications contain underscore characters. Underscore characters should generally be avoided in public identifiers.</Description>
+   <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+   <Name>Identifiers should not match keywords</Name>
+   <Description>Identifiers which conflict with reserved language keywords should be avoided. Using a reserved keyword as an identifier makes it harder for consumers in other languages to use your API.</Description>
+   <Resolution Name="Namespace">Rename namespace {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a namespace makes it harder for consumers in other languages to use the namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182248.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implement IDisposable correctly</Name>
+   <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
+   <Resolution Name="DisposeImplementation">Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Resolution>
+   <Resolution Name="ProvideDisposeBool">Provide an overridable implementation of Dispose(bool) on {0} or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>Mark assemblies with NeutralResourcesLanguageAttribute</Name>
+   <Description>The NeutralResourcesLanguage attribute informs the ResourceManager of the language used to render the neutral culture's resources for an assembly. When looking up resources in the same culture as the neutral resources language, the ResourceManager automatically uses the resources located in the main assembly, instead of searching for a satellite assembly with the current user interface culture for the current thread. This will improve lookup performance for the first resource you load and can reduce your working set.</Description>
+   <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Move P/Invokes to NativeMethods class</Name>
+   <Description>This type contains members with the DllImport attribute. Members with the DllImport attribute should be contained in classes named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218">
+   <Name>Override GetHashCode on overriding Equals</Name>
+   <Description>When overriding Equals, you must also override GetHashCode to guarantee correct behavior with hashtables.</Description>
+   <Resolution Name="Default">Since {0} redefines Equals, it should also redefine GetHashCode.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182358.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036">
+   <Name>Override methods on comparable types</Name>
+   <Description>Types that implement IComparable should redefine Equals and comparison operators to keep the meanings of less than, greater than, and equals consistent throughout the type.</Description>
+   <Resolution Name="Operator">{0} should define operator '{1}' since it implements IComparable.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182163.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+   <Name>Properties should not return arrays</Name>
+   <Description>Properties that return arrays are prone to code inefficiencies. Consider using a collection or making this a method. See the design guidelines for more information.</Description>
+   <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/0fss9skc.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724">
+   <Name>Type names should not match namespaces</Name>
+   <Description>Identifiers which conflict in whole or in part with namespace names should be avoided. Names that describe the purpose or contents of a type are preferred.</Description>
+   <Resolution Name="Default">The type name {0} conflicts in whole or in part with the namespace name '{1}'. Change either name to eliminate the conflict.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182257.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

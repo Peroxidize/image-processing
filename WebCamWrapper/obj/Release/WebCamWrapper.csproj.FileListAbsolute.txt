@@ -1,0 +1,16 @@
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\Touchless.Vision.dll
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\Touchless.Vision.pdb
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\Touchless.Vision.dll.CodeAnalysisLog.xml
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\Touchless.Vision.dll.lastcodeanalysissucceeded
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\System.ComponentModel.Composition.dll
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\WebCamLib.dll
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\bin\Release\WebCamLib.pdb
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\WebCamWrapper.csproj.AssemblyReference.cache
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\Camera\Configuration\CameraFrameSourceConfigurationElement.baml
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\Camera\Configuration\CameraFrameSourceConfigurationElement.g.cs
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\Touchless.Vision_MarkupCompile.cache
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\Touchless.Vision.g.resources
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\WebCamWrapper.csproj.CoreCompileInputs.cache
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\WebCamWrapper.csproj.CopyComplete
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\Touchless.Vision.dll
+C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\obj\Release\Touchless.Vision.pdb

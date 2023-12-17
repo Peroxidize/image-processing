@@ -1,0 +1,1224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Targets>
+  <Target Name="C:\Users\mario\source\repos\digital-image-processing\WebCamLib\bin\Release\Win32\WebCamLib.dll">
+   <Modules>
+    <Module Name="webcamlib.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'WebCamLib.dll' with a strong name key.</Issue>
+      </Message>
+      <Message Id="WebCam" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+       <Issue Name="AssemblyShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'WebCam' in assembly name 'WebCamLib.dll' exists as a discrete term. If your usage is intended to be single word, case it as 'Webcam'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Add an AssemblyVersion attribute to 'WebCamLib.dll'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'WebCamLib.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+       <Issue Name="NoAttribute" Certainty="95" Level="CriticalError">Because 'WebCamLib.dll' exposes externally visible types, mark it with ComVisible(false) at the assembly level and then mark all types within the assembly that should be exposed to COM clients with ComVisible(true).</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="vc.cppcli.attributes.?A0x09502d61">
+       <Types>
+        <Type Name="CppInlineNamespaceAttribute" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Warning">Seal 'CppInlineNamespaceAttribute', if possible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="A_0" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\a\_work\1\s\src\vctools\crt\managed\md\msvcmrt\predefined C++" File="CLI attribute types (compiler internal)" Line="34">Parameter 'A_0' of 'CppInlineNamespaceAttribute::CppInlineNamespaceAttribute(String^)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="vc.cppcli.attributes.?A0xb2abbeb9">
+       <Types>
+        <Type Name="CppInlineNamespaceAttribute" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Warning">Seal 'CppInlineNamespaceAttribute', if possible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="A_0" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\a\_work\1\s\src\vctools\crt\managed\md\msvcmrt\predefined C++" File="CLI attribute types (compiler internal)" Line="34">Parameter 'A_0' of 'CppInlineNamespaceAttribute::CppInlineNamespaceAttribute(String^)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="vc.cppcli.attributes.?A0xb5c69e62">
+       <Types>
+        <Type Name="CppInlineNamespaceAttribute" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Warning">Seal 'CppInlineNamespaceAttribute', if possible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="A_0" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib\predefined C++" File="CLI attribute types (compiler internal)" Line="34">Parameter 'A_0' of 'CppInlineNamespaceAttribute::CppInlineNamespaceAttribute(String^)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="vc.cppcli.attributes.?A0xcc8faeab">
+       <Types>
+        <Type Name="CppInlineNamespaceAttribute" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Warning">Seal 'CppInlineNamespaceAttribute', if possible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="A_0" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib\predefined C++" File="CLI attribute types (compiler internal)" Line="34">Parameter 'A_0' of 'CppInlineNamespaceAttribute::CppInlineNamespaceAttribute(String^)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="vc.cppcli.attributes.?A0xd0338935">
+       <Types>
+        <Type Name="CppInlineNamespaceAttribute" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Warning">Seal 'CppInlineNamespaceAttribute', if possible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="A_0" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\a\_work\1\s\src\vctools\crt\managed\md\msvcmrt\predefined C++" File="CLI attribute types (compiler internal)" Line="34">Parameter 'A_0' of 'CppInlineNamespaceAttribute::CppInlineNamespaceAttribute(String^)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="vc.cppcli.attributes.?A0xe44e0512">
+       <Types>
+        <Type Name="CppInlineNamespaceAttribute" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Warning">Seal 'CppInlineNamespaceAttribute', if possible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="A_0" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\a\_work\1\s\src\vctools\crt\managed\md\msvcmrt\predefined C++" File="CLI attribute types (compiler internal)" Line="34">Parameter 'A_0' of 'CppInlineNamespaceAttribute::CppInlineNamespaceAttribute(String^)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="WebCamLib">
+       <Types>
+        <Type Name="CameraControlProperty" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Exposure_lgSec" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="lg" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'lg' in member name 'CameraControlProperty::Exposure_lgSec' by changing it to 'LG'.</Issue>
+            </Message>
+            <Message Id="lg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'lg' in member name 'CameraControlProperty::Exposure_lgSec' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::Exposure_lgSec'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FocalLength_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraControlProperty::FocalLength_mm' by changing it to 'MM'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::FocalLength_mm'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Iris_10f" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="f" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'f' in member name 'CameraControlProperty::Iris_10f' by changing it to 'F'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::Iris_10f'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Pan_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraControlProperty::Pan_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::Pan_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Roll_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraControlProperty::Roll_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::Roll_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Tilt_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraControlProperty::Tilt_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::Tilt_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Zoom_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraControlProperty::Zoom_mm' by changing it to 'MM'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraControlProperty::Zoom_mm'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraInfo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Index" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_Index(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="44">'CameraInfo::Index::set(int)' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#Name" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_Name(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="57">Method 'CameraInfo::Name::set(String^)' passes 'Name cannot be null.' as the 'paramName' argument to a 'ArgumentNullException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraMethods" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#!CameraMethods()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="197">'CameraMethods::!CameraMethods(void)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CaptureSizes" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1260">Consider a design where 'CameraMethods::CaptureSizes' doesn't nest generic type 'IList&lt;Tuple&lt;int, int, int&gt;^&gt;'.</Issue>
+            </Message>
+            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="SameType" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1260">The property name 'CameraMethods::CaptureSizes' is confusing given the existence of method 'CameraMethods::GetCaptureSizes(int, IList&lt;Tuple&lt;int, int, int&gt;^&gt;^)'. Rename or remove one of these members.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CleanupCameraInfo()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1121">'CameraMethods::CleanupCameraInfo(void)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ConfigureSampleGrabber(IBaseFilter*)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1141">'CameraMethods::ConfigureSampleGrabber(IBaseFilter*)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisplayCameraPropertiesDialog(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="&lt;Module&gt;.OleCreatePropertyFrame(HWND__*,System.UInt32,System.UInt32,System.optional(IsConst) Char*,optional(System.Runtime.CompilerServices.IsLong) System.UInt32,IUnknown**,optional(System.Runtime.CompilerServices.IsLong) System.UInt32,_GUID*,optional(System.Runtime.CompilerServices.IsLong) System.UInt32,optional(System.Runtime.CompilerServices.IsLong) System.UInt32,System.Void*)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="HResultOrErrorCode" Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1074">'CameraMethods::DisplayCameraPropertiesDialog(int)' calls 'Global::OleCreatePropertyFrame(HWND__*, unsigned int, unsigned int, const wchar_t*, unsigned int, IUnknown**, unsigned int, _GUID*, unsigned int, unsigned int, void*)' but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Issue>
+            </Message>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Reserved" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1113">'CameraMethods::DisplayCameraPropertiesDialog(int)' creates an exception of type 'COMException', an exception type that is reserved by the runtime and should never be raised by managed code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="267">'CameraMethods::DisplayCameraPropertiesDialog(int)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1034">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::DisplayCameraPropertiesDialog(int)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1037">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::DisplayCameraPropertiesDialog(int)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCameraControlProperty(WebCamLib.CameraProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::GetCameraControlProperty(CameraProperty)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCameraInfo(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="278">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::GetCameraInfo(int)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="281">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::GetCameraInfo(int)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCaptureSizes(System.Int32,System.Collections.Generic.IList`1&lt;System.Tuple`3&lt;System.Int32,System.Int32,System.Int32&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1170">Consider a design where 'CameraMethods::GetCaptureSizes(int, IList&lt;Tuple&lt;int, int, int&gt;^&gt;^)' doesn't nest generic type 'IList&lt;Tuple&lt;int, int, int&gt;^&gt;'.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1170">'CameraMethods::GetCaptureSizes(int, IList&lt;Tuple&lt;int, int, int&gt;^&gt;^)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1175">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::GetCaptureSizes(int, IList&lt;Tuple&lt;int, int, int&gt;^&gt;^)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1178">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::GetCaptureSizes(int, IList&lt;Tuple&lt;int, int, int&gt;^&gt;^)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1170">In externally visible method 'CameraMethods::GetCaptureSizes(int^, IList&lt;Tuple&lt;int^, int^, int^&gt;^&gt;^)', validate parameter 'sizes' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty(WebCamLib.CameraProperty,System.Boolean,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="580">In method 'CameraMethods::GetProperty(CameraProperty, bool, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty(WebCamLib.CameraProperty,System.Boolean,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="580">In method 'CameraMethods::GetProperty(CameraProperty, bool, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty_percentage(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="643">Correct the casing of 'percentage' in member name 'CameraMethods::GetProperty_percentage(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="643">In method 'CameraMethods::GetProperty_percentage(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="643">Remove the underscores from member name 'CameraMethods::GetProperty_percentage(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty_percentage(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="635">Correct the casing of 'percentage' in member name 'CameraMethods::GetProperty_percentage(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="635">In method 'CameraMethods::GetProperty_percentage(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="635">Remove the underscores from member name 'CameraMethods::GetProperty_percentage(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty_value(WebCamLib.CameraControlProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="805">Correct the casing of 'value' in member name 'CameraMethods::GetProperty_value(CameraControlProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="805">In method 'CameraMethods::GetProperty_value(CameraControlProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="805">Remove the underscores from member name 'CameraMethods::GetProperty_value(CameraControlProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="805">'CameraMethods::GetProperty_value(CameraControlProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty_value(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="623">Correct the casing of 'value' in member name 'CameraMethods::GetProperty_value(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="623">In method 'CameraMethods::GetProperty_value(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="623">Remove the underscores from member name 'CameraMethods::GetProperty_value(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty_value(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="618">Correct the casing of 'value' in member name 'CameraMethods::GetProperty_value(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="618">In method 'CameraMethods::GetProperty_value(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="618">Remove the underscores from member name 'CameraMethods::GetProperty_value(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProperty_value(WebCamLib.VideoProcAmpProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="831">Correct the casing of 'value' in member name 'CameraMethods::GetProperty_value(VideoProcAmpProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="831">In method 'CameraMethods::GetProperty_value(VideoProcAmpProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="831">Remove the underscores from member name 'CameraMethods::GetProperty_value(VideoProcAmpProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="831">'CameraMethods::GetProperty_value(VideoProcAmpProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPropertyRange(WebCamLib.CameraControlProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="749">In method 'CameraMethods::GetPropertyRange(CameraControlProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="749">'CameraMethods::GetPropertyRange(CameraControlProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPropertyRange(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="737">In method 'CameraMethods::GetPropertyRange(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPropertyRange(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="732">In method 'CameraMethods::GetPropertyRange(CameraProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPropertyRange(WebCamLib.VideoProcAmpProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="777">In method 'CameraMethods::GetPropertyRange(VideoProcAmpProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="777">'CameraMethods::GetPropertyRange(VideoProcAmpProperty, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetVideoProcAmpProperty(WebCamLib.CameraProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Proc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">Correct the spelling of 'Proc' in member name 'CameraMethods::GetVideoProcAmpProperty(CameraProperty)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::GetVideoProcAmpProperty(CameraProperty)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsCameraControlProperty(WebCamLib.CameraProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::IsCameraControlProperty(CameraProperty)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsPropertyMaskEqual(WebCamLib.CameraProperty,WebCamLib.PropertyTypeMask)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::IsPropertyMaskEqual(CameraProperty, PropertyTypeMask)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsPropertySupported(WebCamLib.CameraControlProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="518">'CameraMethods::IsPropertySupported(CameraControlProperty)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsPropertySupported(WebCamLib.VideoProcAmpProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="539">'CameraMethods::IsPropertySupported(VideoProcAmpProperty)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsVideoProcAmpProperty(WebCamLib.CameraProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Proc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">Correct the spelling of 'Proc' in member name 'CameraMethods::IsVideoProcAmpProperty(CameraProperty)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="568">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::IsVideoProcAmpProperty(CameraProperty)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PropertyHasRange(WebCamLib.CameraProperty)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="906">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::PropertyHasRange(CameraProperty)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PropertyHasRange(WebCamLib.CameraProperty,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="906">The 'this' parameter (or 'Me' in Visual Basic) of 'CameraMethods::PropertyHasRange(CameraProperty, interior_ptr&lt;bool&gt;)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RefreshCameraList()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="&lt;Module&gt;.VariantClear(tagVARIANT*)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="HResultOrErrorCode" Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="254">'CameraMethods::RefreshCameraList(void)' calls 'Global::VariantClear(tagVARIANT*)' but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Issue>
+            </Message>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Reserved" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="268">'CameraMethods::RefreshCameraList(void)' creates an exception of type 'COMException', an exception type that is reserved by the runtime and should never be raised by managed code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="208">'CameraMethods::RefreshCameraList(void)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetCaptureFormat(IBaseFilter*,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="1273">'CameraMethods::SetCaptureFormat(IBaseFilter*, int, int, int)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty(WebCamLib.CameraProperty,System.Boolean,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="663">In method 'CameraMethods::SetProperty(CameraProperty, bool, int, bool)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty(WebCamLib.CameraProperty,System.Boolean,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="663">In method 'CameraMethods::SetProperty(CameraProperty, bool, int, bool, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_percentage(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="710">Correct the casing of 'percentage' in member name 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="710">In method 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="710">Remove the underscores from member name 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool)'.</Issue>
+            </Message>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="727">Method 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool)' passes 'Percentage is not valid.' as the 'paramName' argument to a 'ArgumentOutOfRangeException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_percentage(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="705">Correct the casing of 'percentage' in member name 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool, interior_ptr&lt;bool&gt;)' by changing it to 'Percentage'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="705">In method 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="705">Remove the underscores from member name 'CameraMethods::SetProperty_percentage(CameraProperty, int, bool, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_value(WebCamLib.CameraControlProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="857">Correct the casing of 'value' in member name 'CameraMethods::SetProperty_value(CameraControlProperty, int, bool)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="857">In method 'CameraMethods::SetProperty_value(CameraControlProperty, int, bool)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="857">Remove the underscores from member name 'CameraMethods::SetProperty_value(CameraControlProperty, int, bool)'.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="857">'CameraMethods::SetProperty_value(CameraControlProperty, int, bool)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_value(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="678">Correct the casing of 'value' in member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="678">In method 'CameraMethods::SetProperty_value(CameraProperty, int, bool)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="678">Remove the underscores from member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_value(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="688">Correct the casing of 'value' in member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="688">In method 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="688">Remove the underscores from member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool)'.</Issue>
+            </Message>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="698">Method 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool)' passes 'Property value is outside of its defined range.' as the 'paramName' argument to a 'ArgumentOutOfRangeException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_value(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean,System.Boolean,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="683">Correct the casing of 'value' in member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool, interior_ptr&lt;bool&gt;)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="683">In method 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="683">Remove the underscores from member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool, bool, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_value(WebCamLib.CameraProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="673">Correct the casing of 'value' in member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool, interior_ptr&lt;bool&gt;)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="673">In method 'CameraMethods::SetProperty_value(CameraProperty, int, bool, interior_ptr&lt;bool&gt;)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="673">Remove the underscores from member name 'CameraMethods::SetProperty_value(CameraProperty, int, bool, interior_ptr&lt;bool&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetProperty_value(WebCamLib.VideoProcAmpProperty,{modopt(System.Runtime.CompilerServices.IsLong)}System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="879">Correct the casing of 'value' in member name 'CameraMethods::SetProperty_value(VideoProcAmpProperty, int, bool)' by changing it to 'Value'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="879">In method 'CameraMethods::SetProperty_value(VideoProcAmpProperty, int, bool)', correct the spelling of 'b' in parameter name 'bAuto' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="879">Remove the underscores from member name 'CameraMethods::SetProperty_value(VideoProcAmpProperty, int, bool)'.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="879">'CameraMethods::SetProperty_value(VideoProcAmpProperty, int, bool)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#StartCamera(System.Int32,System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="267">'CameraMethods::StartCamera(int, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;)' has a cyclomatic complexity of 33. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+            <Message Id="bpp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="267">In method 'CameraMethods::StartCamera(int, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;)', correct the spelling of 'bpp' in parameter name 'bpp' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="267">'CameraMethods::StartCamera(int, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="302">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::StartCamera(int, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="305">Because the behavior of 'int::ToString(void)' could vary based on the current user's locale settings, replace this call in 'CameraMethods::StartCamera(int, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;)' with a call to 'int::ToString(IFormatProvider^)'. If the result of 'int::ToString(IFormatProvider^)' will be displayed to the user, specify 'CultureInfo::CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo::InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#StartCamera(System.Int32,System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Int32{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;,System.Boolean{modopt(System.Runtime.CompilerServices.IsExplicitlyDereferenced)}&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="bpp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="293">In method 'CameraMethods::StartCamera(int, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;int&gt;, interior_ptr&lt;bool&gt;)', correct the spelling of 'bpp' in parameter name 'bpp' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#StopCamera()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="986">'CameraMethods::StopCamera(void)' contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnImageCapture" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="171">Declare the first parameter of 'CameraMethods::CaptureCallbackDelegate' as an object named 'sender'.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="171">Declare the second parameter of 'CameraMethods::CaptureCallbackDelegate' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.h" Line="171">Rename 'CameraMethods::CaptureCallbackDelegate' to end in 'EventHandler'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraMethods+CaptureCallbackDelegate" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="ab" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Name="DelegateParameter" Certainty="75" Level="CriticalWarning">In delegate 'CameraMethods::CaptureCallbackDelegate', correct the spelling of 'ab' in parameter name 'abData' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+          </Message>
+          <Message Id="dw" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Name="DelegateParameter" Certainty="75" Level="CriticalWarning">In delegate 'CameraMethods::CaptureCallbackDelegate', correct the spelling of 'dw' in parameter name 'dwSize' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'CameraMethods::CaptureCallbackDelegate' so that it does not end in 'Delegate'.</Issue>
+          </Message>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'CameraMethods::CaptureCallbackDelegate'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="CameraProperty" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+           <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'CameraProperty' that has a value of zero with a suggested name of 'None'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Exposure_lgSec" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="lg" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'lg' in member name 'CameraProperty::Exposure_lgSec' by changing it to 'LG'.</Issue>
+            </Message>
+            <Message Id="lg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'lg' in member name 'CameraProperty::Exposure_lgSec' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::Exposure_lgSec'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FocalLength_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraProperty::FocalLength_mm' by changing it to 'MM'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::FocalLength_mm'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Iris_10f" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="f" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'f' in member name 'CameraProperty::Iris_10f' by changing it to 'F'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::Iris_10f'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Pan_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty::Pan_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::Pan_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Roll_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty::Roll_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::Roll_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Tilt_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty::Tilt_degrees' by changing it to 'Degrees'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::Tilt_degrees'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Zoom_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraProperty::Zoom_mm' by changing it to 'MM'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty::Zoom_mm'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CameraPropertyCapabilities" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CameraIndex" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_CameraIndex(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="78">'CameraPropertyCapabilities::CameraIndex::set(int)' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+              <Message Id="cameraIndex" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Name="Parameter" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="78">'cameraIndex', a parameter declared in 'CameraPropertyCapabilities::CameraIndex::set(int)', has the same name as an instance field on the type. Change the name of one of these items.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#IsGetRangeSupported" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_IsGetRangeSupported(System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="118">'CameraPropertyCapabilities::IsGetRangeSupported::set(bool)' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#IsGetSupported" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_IsGetSupported(System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="98">'CameraPropertyCapabilities::IsGetSupported::set(bool)' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#IsSetSupported" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_IsSetSupported(System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="108">'CameraPropertyCapabilities::IsSetSupported::set(bool)' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#Property" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_Property(WebCamLib.CameraProperty)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamLib" File="WebCamLib.cpp" Line="88">'CameraPropertyCapabilities::Property::set(CameraProperty)' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PropertyTypeMask" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+           <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'PropertyTypeMask' that has a value of zero with a suggested name of 'None'.</Issue>
+          </Message>
+          <Message TypeName="MarkEnumsWithFlags" Category="Microsoft.Design" CheckId="CA1027" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">The constituent members of 'PropertyTypeMask' appear to represent flags that can be combined rather than discrete values. If this is correct, mark the enumeration with FlagsAttribute.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#VideoProcAmpPropertyMask" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Proc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Proc' in member name 'PropertyTypeMask::VideoProcAmpPropertyMask' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="VideoProcAmpProperty" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Proc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:01Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Proc' in type name 'VideoProcAmpProperty'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Avoid excessive complexity</Name>
+   <Description>Method implementations that are exceedingly complex increase the challenge of understanding and maintaining code.</Description>
+   <Resolution Name="Default">{0} has a cyclomatic complexity of {1}. Rewrite or refactor the method to reduce complexity to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Avoid uncalled private code</Name>
+   <Description>There is uncalled code that is not externally visible and is not a known runtime entry point. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnsealedAttributes" Category="Microsoft.Performance" CheckId="CA1813">
+   <Name>Avoid unsealed attributes</Name>
+   <Description>Seal attribute types for improved performance. Sealing attribute types speeds up performance during reflection on custom attributes.</Description>
+   <Resolution Name="Default">Seal {0}, if possible.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182267.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="AssemblyShouldBeDiscreteTerm">The compound word '{0}' in assembly name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Declare event handlers correctly</Name>
+   <Description>By convention, .NET events have two parameters that specify the event sender and event data. Event handler signatures should follow this form: void MyEventHandler(object sender, EventArgs e). The 'sender' parameter is always of type System.Object, even if it is possible to employ a more specific type. The 'e' parameter is always of type System.EventArgs. Events that do not provide event data should use the System.EventHandler delegate type. Event handlers return void so that they can send each event to multiple target methods. Any value returned by a target would be lost after the first call.</Description>
+   <Resolution Name="First">Declare the first parameter of {0} as an object named 'sender'.</Resolution>
+   <Resolution Name="Second">Declare the second parameter of {0} as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>Do not ignore method results</Name>
+   <Description>The result of methods that return new instances of strings should be assigned to a variable and subsequently used. If the result of a method that creates a new object, such as String.ToLower(), is not assigned to a variable, the call is wasted.</Description>
+   <Resolution Name="HResultOrErrorCode">{0} calls {1} but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+   <Name>Do not nest generic types in member signatures</Name>
+   <Description>Avoid API that require users to instantiate a generic type with another generic type as type argument. The syntax gets too complex.</Description>
+   <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182144.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+   <Name>Do not raise reserved exception types</Name>
+   <Description>User code should not create and raise exceptions of certain types that are reserved by the runtime or which are of a too general exception type. Exception types that are too general include Exception, SystemException, and ApplicationException. Exception types that are reserved by the runtime include ThreadAbortException, OutOfMemoryException, ExecutionEngineException, and IndexOutOfRangeException.</Description>
+   <Resolution Name="Reserved">{0} creates an exception of type {1}, an exception type that is reserved by the runtime and should never be raised by managed code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182338.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+   <Name>Enums should have zero value</Name>
+   <Description>An enum should generally have a zero value. If the enum is not decorated with the Flags attribute, it should have a member with a value of zero that represents the empty state. Optionally, this value is named 'None'. For a Flags-attributed enum, a zero-valued member is optional and, if it exists, should always be named 'None'. This value should indicate that no values have been set in the enum. Using a zero-valued member for other purposes is contrary to the use of the Flags attribute in that the bitwise AND and OR operators are useless with the member.</Description>
+   <Resolution Name="NotFlagsNoZeroValue">Add a member to {0} that has a value of zero with a suggested name of 'None'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182149.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="DelegateParameter">In delegate {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+   <Name>Identifiers should have correct suffix</Name>
+   <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
+   <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182244.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identifiers should not contain underscores</Name>
+   <Description>Do not use underscores when specifying identifiers. Some generated Visual Studio identifiers for applications contain underscore characters. Underscore characters should generally be avoided in public identifiers.</Description>
+   <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+   <Name>Identifiers should not have incorrect suffix</Name>
+   <Description>Types that do not extend certain base types should not use reserved name suffixes. Types and members should not use 'Ex' or 'New' to distinguish them from an earlier version of the same API, instead, use a numeric suffix such as '2' or provide a more meaningful suffix. Concrete type implementations and members should not end 'Impl'. Members instead, should either consider using the suggested alternate 'Core' in replacement of 'Impl' or avoid any suffix at all.</Description>
+   <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182247.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208">
+   <Name>Instantiate argument exceptions correctly</Name>
+   <Description>String arguments passed to constructors of ArgumentException and its derived types should be correct. Types derived from ArgumentException have inconsistent constructor overloads with respect to the message and paramName parameters as compared to ArgumentException.</Description>
+   <Resolution Name="IncorrectParameterName">Method {0} passes '{1}' as the {2} argument to a {3} constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182347.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016">
+   <Name>Mark assemblies with AssemblyVersionAttribute</Name>
+   <Description>Assemblies should use version numbers. The version number is considered part of an assembly's identity. Versioning is applied by means of the AssemblyVersion attribute.</Description>
+   <Resolution Name="Default">Add an AssemblyVersion attribute to {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182155.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017">
+   <Name>Mark assemblies with ComVisibleAttribute</Name>
+   <Description>The System.Runtime.InteropServices.ComVisible attribute indicates whether COM clients can use the library. Good design dictates that developers explicitly indicate COM visibility. The default value for this attribute is 'true'. However, the best design is to mark the assembly ComVisible false, and then mark types, interfaces, and individual members as ComVisible true, as appropriate.</Description>
+   <Resolution Name="NoAttribute">Because {0} exposes externally visible types, mark it with ComVisible(false) at the assembly level and then mark all types within the assembly that should be exposed to COM clients with ComVisible(true).</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182157.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError, Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkEnumsWithFlags" Category="Microsoft.Design" CheckId="CA1027">
+   <Name>Mark enums with FlagsAttribute</Name>
+   <Description>The enumeration appears to be made up of combinable flags. If this true, apply the Flags attribute to the enumeration.</Description>
+   <Resolution Name="Default">The constituent members of {0} appear to represent flags that can be combined rather than discrete values. If this is correct, mark the enumeration with FlagsAttribute.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182159.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+   <Name>Nested types should not be visible</Name>
+   <Description>Do not use public, protected or protected internal (Protected Friend) nested types as a way of grouping types. Use namespaces for this purpose. There are very limited scenarios where nested types are the best design. Also, nested type member accessibility is not clearly understood by all audiences. Enumerators are exempt from this rule.</Description>
+   <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182162.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721">
+   <Name>Property names should not match get methods</Name>
+   <Description>A Get method was found with the same name as a property. Get methods and properties should have names that clearly distinguish their function. See the design guidelines for information regarding choosing properties over methods.</Description>
+   <Resolution Name="SameType">The property name {0} is confusing given the existence of method {1}. Rename or remove one of these members.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182253.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveCallsToGCKeepAlive" Category="Microsoft.Reliability" CheckId="CA2004">
+   <Name>Remove calls to GC.KeepAlive</Name>
+   <Description>If converting to SafeHandle usage, remove all calls to GC.KeepAlive(object). Classes relying on SafeHandle do not require calls to GC.KeepAlive, and unnecessary calls can make code harder to maintain.</Description>
+   <Resolution Name="Default">{0} contains one or more calls to GC.KeepAlive(object) that should be removed (after converting to SafeHandle to encapsulate the unmanaged resource).</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182293.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="reliabilityrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500">
+   <Name>Variable names should not match field names</Name>
+   <Description>Instance field and variable names should not be identical within the same scope.</Description>
+   <Resolution Name="Parameter">{0}, a parameter declared in {1}, has the same name as an instance field on the type. Change the name of one of these items.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182216.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
