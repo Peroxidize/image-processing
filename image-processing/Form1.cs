@@ -360,14 +360,21 @@ namespace image_processing {
                 e.Graphics.DrawImage(_latestFrame, 0, 0, selectedPicturebox.Width, selectedPicturebox.Height);
 
                 if (camera_filter == 6) { // check for resolution first
+                    camera_filter = 0;
                     Bitmap baseImg = (Bitmap)pictureBox1.Image.Clone();
                     Bitmap secondImage = (Bitmap)_latestFrame.Clone();
+                    if (pictureBox1.Image == null || pictureBox2.Image == null) {
+                        MessageBox.Show("Error: " + "requires two image to perform subtraction", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        comboBoxCameraFilters.SelectedIndex = 0;
+                        return;
+                    }
                     if (baseImg.Width != secondImage.Width
                         || baseImg.Height != secondImage.Height) {
                         comboBoxCameraFilters.SelectedIndex = 0;
                         MessageBox.Show("Error: " + "Resolution does not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+                    camera_filter = 6;
                 }
 
                 // limit the number of threads to 3
