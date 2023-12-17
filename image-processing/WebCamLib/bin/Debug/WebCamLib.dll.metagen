@@ -1,0 +1,148 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly WebCamLib, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class WebCamLib.CameraInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get set' : 
+    Int32 Index 'get set' : 
+  Methods:
+    get_Index(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+Class WebCamLib.CameraPropertyCapabilities: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, WebCamLib.CameraProperty, Boolean, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsFullySupported 'get ' : 
+    Boolean IsSupported 'get ' : 
+    Boolean IsGetRangeSupported 'get set' : 
+    Boolean IsSetSupported 'get set' : 
+    Boolean IsGetSupported 'get set' : 
+    WebCamLib.CameraProperty Property 'get set' : 
+    Int32 CameraIndex 'get set' : 
+  Methods:
+    get_CameraIndex(): PrivateScope, Public, HideBySig, SpecialName
+    get_Property(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsGetSupported(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSetSupported(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsGetRangeSupported(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSupported(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFullySupported(): PrivateScope, Public, HideBySig, SpecialName
+Class WebCamLib.CameraMethods: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 ActiveCameraIndex 'get ' : 
+    Int32 Count 'get set' : 
+    System.Collections.Generic.IList`1[System.Tuple`3[System.Int32,System.Int32,System.Int32]] CaptureSizes 'get ' : 
+    System.Collections.Generic.IDictionary`2[WebCamLib.CameraProperty,WebCamLib.CameraPropertyCapabilities] PropertyCapabilities 'get ' : 
+  Events:
+    CaptureCallbackDelegate OnImageCapture: SpecialName
+  Methods:
+    add_OnImageCapture(CaptureCallbackDelegate): PrivateScope, Public, HideBySig, SpecialName
+    remove_OnImageCapture(CaptureCallbackDelegate): PrivateScope, Public, HideBySig, SpecialName
+    GetCameraInfo(Int32): PrivateScope, Public, HideBySig
+    StartCamera(Int32, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    StartCamera(Int32, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    IsPropertySupported(CameraProperty): PrivateScope, Public, HideBySig
+    IsPropertySupported(CameraProperty, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetProperty(CameraProperty, Boolean(HasFieldMarshal), Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetProperty(CameraProperty, Boolean(HasFieldMarshal), Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetProperty_value(CameraProperty, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetProperty_value(CameraProperty, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetProperty_percentage(CameraProperty, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetProperty_percentage(CameraProperty, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    SetProperty(CameraProperty, Boolean(HasFieldMarshal), Int32 IsLong, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProperty(CameraProperty, Boolean(HasFieldMarshal), Int32 IsLong, Boolean(HasFieldMarshal), Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    SetProperty_value(CameraProperty, Int32 IsLong, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProperty_value(CameraProperty, Int32 IsLong, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    SetProperty_value(CameraProperty, Int32 IsLong, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProperty_value(CameraProperty, Int32 IsLong, Boolean(HasFieldMarshal), Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    SetProperty_percentage(CameraProperty, Int32 IsLong, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProperty_percentage(CameraProperty, Int32 IsLong, Boolean(HasFieldMarshal), Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    PropertyHasRange(CameraProperty): PrivateScope, Public, HideBySig
+    PropertyHasRange(CameraProperty, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetPropertyRange(CameraProperty, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetPropertyRange(CameraProperty, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Int32& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    ValidatePropertyValue(CameraProperty, Int32 IsLong): PrivateScope, Public, HideBySig
+    ValidatePropertyValue(CameraProperty, Int32 IsLong, Boolean& IsExplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetPropertyCapability(CameraProperty): PrivateScope, Public, HideBySig
+    get_PropertyCapabilities(): PrivateScope, Public, HideBySig, SpecialName
+    GetCaptureSizes(Int32, IList`1): PrivateScope, Public, HideBySig
+    get_CaptureSizes(): PrivateScope, Public, HideBySig, SpecialName
+    Cleanup(): PrivateScope, Public, HideBySig
+    StopCamera(): PrivateScope, Public, HideBySig
+    DisplayCameraPropertiesDialog(Int32): PrivateScope, Public, HideBySig
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+    set_Count(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ActiveCameraIndex(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class WebCamLib.CameraMethods+CaptureCallbackDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Byte[](HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Byte[](HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Struct WebCamLib.PropertyTypeMask: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    WebCamLib.PropertyTypeMask CameraControlPropertyMask = 4096 : Public, Static, Literal, HasDefault
+    WebCamLib.PropertyTypeMask VideoProcAmpPropertyMask = 8192 : Public, Static, Literal, HasDefault
+Struct WebCamLib.CameraControlProperty: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    WebCamLib.CameraControlProperty Pan_degrees = 0 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty Tilt_degrees = 1 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty Roll_degrees = 2 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty Zoom_mm = 3 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty Exposure_lgSec = 4 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty Iris_10f = 5 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty FocalLength_mm = 6 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraControlProperty Flash = 7 : Public, Static, Literal, HasDefault
+Struct WebCamLib.VideoProcAmpProperty: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    WebCamLib.VideoProcAmpProperty Brightness = 0 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty Contrast = 1 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty Hue = 2 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty Saturation = 3 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty Sharpness = 4 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty Gamma = 5 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty ColorEnable = 6 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty WhiteBalance = 7 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty BacklightCompensation = 8 : Public, Static, Literal, HasDefault
+    WebCamLib.VideoProcAmpProperty Gain = 9 : Public, Static, Literal, HasDefault
+Struct WebCamLib.CameraProperty: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    WebCamLib.CameraProperty Pan_degrees = 4096 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Tilt_degrees = 4097 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Roll_degrees = 4098 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Zoom_mm = 4099 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Exposure_lgSec = 4100 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Iris_10f = 4101 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty FocalLength_mm = 4102 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Flash = 4103 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Brightness = 8192 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Contrast = 8193 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Hue = 8194 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Saturation = 8195 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Sharpness = 8196 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Gamma = 8197 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty ColorEnable = 8198 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty WhiteBalance = 8199 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty BacklightCompensation = 8200 : Public, Static, Literal, HasDefault
+    WebCamLib.CameraProperty Gain = 8201 : Public, Static, Literal, HasDefault
