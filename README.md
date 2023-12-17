@@ -1,6 +1,6 @@
 # Digital Image Processing
 
-To run the executable file of this project without building it, please refer to the release build below.
+To execute the project's executable file without the need for building, please run the release build. Refer to the location specified below in the file structure.
 
 ## Requirements
 
@@ -15,10 +15,9 @@ To build or run this project, you'll need:
 
 ## File Structure 
 
-image-processing/  
-├─ bin/ 
-│  ├─ Release/ 
-│  │  ├─ image-processing.exe 
-WebCamLib (dependency)/ 
-WebCamWrapper (dependency)/ 
-  
+image-processing/   
+├─ bin/  
+│  ├─ Release/  
+│  │  ├─ image-processing.exe  
+WebCamLib (dependency)/  
+WebCamWrapper (dependency)/  
