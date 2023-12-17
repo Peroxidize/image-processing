@@ -4,4 +4,5 @@ C:\Users\mario\Downloads\csharpWebCam-master\WebCamLib\obj\Debug\Win32\WebCamLib
 C:\Users\mario\Downloads\csharpWebCam-master\WebCamLib\obj\Debug\Win32\NativeCodeAnalysis.read.1.tlog
 C:\Users\mario\source\repos\digital-image-processing\WebCamLib\bin\Debug\Win32\WebCamLib.dll.lastcodeanalysissucceeded
 C:\Users\mario\source\repos\digital-image-processing\WebCamLib\bin\Debug\Win32\WebCamLib.dll.CodeAnalysisLog.xml
+C:\Users\mario\source\repos\digital-image-processing\WebCamLib\obj\Debug\Win32\WebCamLib.vcxproj.AssemblyReference.cache
 C:\Users\mario\source\repos\digital-image-processing\WebCamLib\obj\Debug\Win32\NativeCodeAnalysis.read.1.tlog

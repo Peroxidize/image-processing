@@ -260,12 +260,9 @@ namespace image_processing {
                         //int _G = Math.Min(255, (int)(0.349 * R + 0.686 * G + 0.168 * B));
                         //int _B = Math.Min(255, (int)(0.272 * R + 0.534 * G + 0.131 * B));
 
-                        p[2] = Math.Min((byte)255, 
-                            (byte)(0.393 * red + 0.769 * green + 0.189 * blue));
-                        p[1] = Math.Min((byte)255,
-                            (byte)(0.349 * red + 0.686 * green + 0.168 * blue));
-                        p[0] = Math.Min((byte)255,
-                            (byte)(0.272 * red + 0.534 * green + 0.131 * blue));
+                        p[2] = (byte) Math.Min(255, (int)(0.393 * red + 0.769 * green + 0.189 * blue));
+                        p[1] = (byte) Math.Min(255, (int)(0.349 * red + 0.686 * green + 0.168 * blue));
+                        p[0] = (byte) Math.Min(255, (int)(0.272 * red + 0.534 * green + 0.131 * blue));
 
                         p += 3;  ///very good....
 					}

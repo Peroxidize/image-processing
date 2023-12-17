@@ -429,7 +429,7 @@ namespace image_processing {
             });
         }
 
-        private async void drawHistogram(Graphics g, Size s, int[] data, Color? BarColor = null) {
+        private void drawHistogram(Graphics g, Size s, int[] data, Color? BarColor = null) {
             if (BarColor == null) BarColor = Color.Gray;
             Brush BarBrush = new SolidBrush((Color)BarColor);
 
