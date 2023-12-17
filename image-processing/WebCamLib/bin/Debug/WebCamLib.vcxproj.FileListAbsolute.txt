@@ -1,2 +1,0 @@
-C:\Users\mario\source\repos\digital-image-processing\image-processing\WebCamLib\bin\Debug\WebCamLib.vcxproj.AssemblyReference.cache
-C:\Users\mario\source\repos\digital-image-processing\image-processing\WebCamLib\bin\Debug\WebCamLib.dll
