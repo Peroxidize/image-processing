@@ -1,5 +1,7 @@
 # Digital Image Processing
 
+To run the executable file of this project without building it, please refer to the release build below.
+
 ## Requirements
 
 To build or run this project, you'll need:
@@ -11,11 +13,12 @@ To build or run this project, you'll need:
 
 ### [C# WebCam](https://github.com/rockstardev/csharpWebCam)
 
-## File Structure  
+## File Structure 
+
 image-processing/  
-├─ bin/  
-│  ├─ Debug/  
-│  │  ├─ image-processing.exe  
-WebCamLib (dependency)/  
-WebCamWrapper (dependency)/  
+├─ bin/ 
+│  ├─ Release/ 
+│  │  ├─ image-processing.exe 
+WebCamLib (dependency)/ 
+WebCamWrapper (dependency)/ 
   
