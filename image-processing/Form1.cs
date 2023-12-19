@@ -396,23 +396,27 @@ namespace image_processing {
         }
 
         private void filterFrames() {
-            Bitmap toprocess = (Bitmap)_latestFrame.Clone();
+            Bitmap toprocess = null;
 
             switch (camera_filter) {
                 case 0:
                     return;
                 case 1:
+                    toprocess = (Bitmap)_latestFrame.Clone();
                     break;
                 case 2:
+                    toprocess = (Bitmap)_latestFrame.Clone();
                     ImageProcessing.pointer_GreyScale(toprocess);
                     break;
                 case 3:
+                    toprocess = (Bitmap)_latestFrame.Clone();
                     ImageProcessing.pointer_ColorInversion(toprocess);
                     break;
                 case 4:
                     if (isDrawing) {
                         return;
                     }
+                    toprocess = (Bitmap)_latestFrame.Clone();
                     int[] histogram = ImageProcessing.pointer_Histogram(toprocess);
                     using (Graphics g = pictureBox3.CreateGraphics()) {
                         isDrawing = true;
@@ -421,9 +425,11 @@ namespace image_processing {
                     }
                     return;
                 case 5:
+                    toprocess = (Bitmap)_latestFrame.Clone();
                     ImageProcessing.pointer_Sepia(toprocess);
                     break;
-                case 6:
+                default:
+                    toprocess = (Bitmap)_latestFrame.Clone();
                     Bitmap baseImg = (Bitmap) pictureBox1.Image.Clone();
                     ImageProcessing.pointer_Subtraction(toprocess, baseImg);
                     break;

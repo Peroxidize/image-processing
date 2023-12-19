@@ -1,0 +1,3 @@
+C:\Users\mario\source\repos\digital-image-processing\WebCamLib\bin\Debug\x64\WebCamLib.dll.lastcodeanalysissucceeded
+C:\Users\mario\source\repos\digital-image-processing\WebCamLib\bin\Debug\x64\WebCamLib.dll.CodeAnalysisLog.xml
+C:\Users\mario\source\repos\digital-image-processing\WebCamLib\obj\Debug\x64\NativeCodeAnalysis.read.1.tlog
