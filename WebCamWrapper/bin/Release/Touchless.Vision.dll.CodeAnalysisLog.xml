@@ -4,34 +4,34 @@
  <Namespaces>
   <Namespace Name="Touchless.Shared.Extensions">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Touchless.Shared.Extensions' with another namespace.</Issue>
     </Message>
-    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Shared.Extensions'.</Issue>
     </Message>
-    <Message Id="Shared" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+    <Message Id="Shared" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="95" Level="Error">Rename namespace Touchless.Shared.Extensions so that it no longer conflicts with the reserved language keyword 'Shared'. Using a reserved keyword as the name of a namespace makes it harder for consumers in other languages to use the namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Touchless.Vision.Camera">
    <Messages>
-    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Vision.Camera'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Touchless.Vision.Camera.Configuration">
    <Messages>
-    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Vision.Camera.Configuration'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Touchless.Vision.Contracts">
    <Messages>
-    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+    <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in namespace name 'Touchless.Vision.Contracts'.</Issue>
     </Message>
    </Messages>
@@ -42,16 +42,16 @@
    <Modules>
     <Module Name="touchless.vision.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Touchless.Vision.dll' with a strong name key.</Issue>
       </Message>
-      <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+      <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in assembly name 'Touchless.Vision.dll'.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'Touchless.Vision.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Warning">Because assembly 'Touchless.Vision.dll' contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Issue>
       </Message>
      </Messages>
@@ -60,55 +60,55 @@
        <Types>
         <Type Name="Extensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">The type name 'Extensions' conflicts in whole or in part with the namespace name 'Touchless.Shared.Extensions'. Change either name to eliminate the conflict.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#DeleteObject(System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Extensions.DeleteObject(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ForEach`1(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Action`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="17">In externally visible method 'Extensions.ForEach&lt;T&gt;(this IEnumerable&lt;T&gt;, Action&lt;T&gt;)', validate parameter 'items' before using it.</Issue>
             </Message>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="19">In externally visible method 'Extensions.ForEach&lt;T&gt;(this IEnumerable&lt;T&gt;, Action&lt;T&gt;)', validate parameter 'action' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#IfNotNull`1(!!0,System.Action`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="29">In externally visible method 'Extensions.IfNotNull&lt;T&gt;(this T, Action&lt;T&gt;)', validate parameter 'action' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToBitmapSource(System.Drawing.Bitmap)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Touchless.Shared.Extensions.Extensions.DeleteObject(System.IntPtr)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+            <Message Id="Touchless.Shared.Extensions.Extensions.DeleteObject(System.IntPtr)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
              <Issue Name="HResultOrErrorCode" Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="66">'Extensions.ToBitmapSource(this Bitmap)' calls 'Extensions.DeleteObject(IntPtr)' but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="58">In externally visible method 'Extensions.ToBitmapSource(this Bitmap)', validate parameter 'source' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToDrawingPoint(System.Windows.Point)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="44">In method 'Extensions.ToDrawingPoint(this Point)', consider providing a more meaningful name than parameter name 'p'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToWindowsPoint(System.Drawing.Point)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Shared\Extensions" File="Extensions.cs" Line="35">In method 'Extensions.ToWindowsPoint(this Point)', consider providing a more meaningful name than parameter name 'p'.</Issue>
             </Message>
            </Messages>
@@ -121,7 +121,7 @@
        <Types>
         <Type Name="ExportInterfaceNames" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'ExportInterfaceNames' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
@@ -132,138 +132,138 @@
        <Types>
         <Type Name="Camera" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
            <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'Camera' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
           </Message>
-          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">The type name 'Camera' conflicts in whole or in part with the namespace name 'Touchless.Vision.Camera'. Change either name to eliminate the conflict.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(WebCamLib.CameraMethods,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="520">In externally visible method 'Camera.Camera(CameraMethods, string, int)', validate parameter 'cameraMethods' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CaptureCallbackProc(System.Int32,System.Byte[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="1021">In method 'Camera.CaptureCallbackProc(int, byte[])', call System.IDisposable.Dispose on object 'new Bitmap(this._width, this._height, !stride, PixelFormat.Format24bppRgb, scan0)' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
              <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="687">Change 'Camera.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
             </Message>
-            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="687">Modify 'Camera.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetCameraInfo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="722">Change 'Camera.GetCameraInfo()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="861">Correct the casing of 'percentage' in member name 'Camera.GetCameraProperty_percentage(CameraProperty)' by changing it to 'Percentage'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="861">Remove the underscores from member name 'Camera.GetCameraProperty_percentage(CameraProperty)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetCameraProperty_value(Touchless.Vision.Camera.CameraProperty)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="839">Correct the casing of 'value' in member name 'Camera.GetCameraProperty_value(CameraProperty)' by changing it to 'Value'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="839">Remove the underscores from member name 'Camera.GetCameraProperty_value(CameraProperty)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetCurrentImage()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="706">In method 'Camera.GetCurrentImage()', call System.IDisposable.Dispose on object 'b' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="698">Change 'Camera.GetCurrentImage()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty(Touchless.Vision.Camera.CameraProperty,Touchless.Vision.Camera.CameraPropertyValue)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="745">In externally visible method 'Camera.SetCameraProperty(CameraProperty, CameraPropertyValue)', validate parameter 'value' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="802">Correct the casing of 'percentage' in member name 'Camera.SetCameraProperty_percentage(CameraProperty, bool)' by changing it to 'Percentage'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="802">Remove the underscores from member name 'Camera.SetCameraProperty_percentage(CameraProperty, bool)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="808">Correct the casing of 'percentage' in member name 'Camera.SetCameraProperty_percentage(CameraProperty, int)' by changing it to 'Percentage'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="808">Remove the underscores from member name 'Camera.SetCameraProperty_percentage(CameraProperty, int)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty_percentage(Touchless.Vision.Camera.CameraProperty,System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="percentage" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="813">Correct the casing of 'percentage' in member name 'Camera.SetCameraProperty_percentage(CameraProperty, int, bool)' by changing it to 'Percentage'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="813">Remove the underscores from member name 'Camera.SetCameraProperty_percentage(CameraProperty, int, bool)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty_value(Touchless.Vision.Camera.CameraProperty,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="779">Correct the casing of 'value' in member name 'Camera.SetCameraProperty_value(CameraProperty, bool)' by changing it to 'Value'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="779">Remove the underscores from member name 'Camera.SetCameraProperty_value(CameraProperty, bool)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty_value(Touchless.Vision.Camera.CameraProperty,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="785">Correct the casing of 'value' in member name 'Camera.SetCameraProperty_value(CameraProperty, int)' by changing it to 'Value'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="785">Remove the underscores from member name 'Camera.SetCameraProperty_value(CameraProperty, int)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetCameraProperty_value(Touchless.Vision.Camera.CameraProperty,System.Int32,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="value" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="790">Correct the casing of 'value' in member name 'Camera.SetCameraProperty_value(CameraProperty, int, bool)' by changing it to 'Value'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="790">Remove the underscores from member name 'Camera.SetCameraProperty_value(CameraProperty, int, bool)'.</Issue>
             </Message>
            </Messages>
@@ -274,7 +274,7 @@
          <Members>
           <Member Name="#NewFrame" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Rename 'Action&lt;IFrameSource, Frame, double&gt;' to end in 'EventHandler'.</Issue>
             </Message>
            </Messages>
@@ -283,80 +283,80 @@
         </Type>
         <Type Name="CameraProperty" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'CameraProperty' that has a value of zero with a suggested name of 'None'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Exposure_lgSec" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="lg" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="lg" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'lg' in member name 'CameraProperty.Exposure_lgSec' by changing it to 'LG'.</Issue>
             </Message>
-            <Message Id="lg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="lg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'lg' in member name 'CameraProperty.Exposure_lgSec' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Exposure_lgSec'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FocalLength_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraProperty.FocalLength_mm' by changing it to 'MM'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.FocalLength_mm'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Iris_10f" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="f" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="f" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'f' in member name 'CameraProperty.Iris_10f' by changing it to 'F'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Iris_10f'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Pan_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty.Pan_degrees' by changing it to 'Degrees'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Pan_degrees'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Roll_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty.Roll_degrees' by changing it to 'Degrees'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Roll_degrees'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Tilt_degrees" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="degrees" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'degrees' in member name 'CameraProperty.Tilt_degrees' by changing it to 'Degrees'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Tilt_degrees'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Zoom_mm" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message Id="mm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'mm' in member name 'CameraProperty.Zoom_mm' by changing it to 'MM'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CameraProperty.Zoom_mm'.</Issue>
             </Message>
            </Messages>
@@ -365,10 +365,10 @@
         </Type>
         <Type Name="CameraPropertyCapabilities" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Since 'CameraPropertyCapabilities' redefines Equals, it should also redefine GetHashCode.</Issue>
           </Message>
-          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '!=' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '&lt;' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyCapabilities' should define operator '==' since it implements IComparable.</Issue>
@@ -378,7 +378,7 @@
          <Members>
           <Member Name="#CompareTo(Touchless.Vision.Camera.CameraPropertyCapabilities)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="358">In externally visible method 'CameraPropertyCapabilities.CompareTo(CameraPropertyCapabilities)', validate parameter 'other' before using it.</Issue>
             </Message>
            </Messages>
@@ -387,10 +387,10 @@
         </Type>
         <Type Name="CameraPropertyRange" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Since 'CameraPropertyRange' redefines Equals, it should also redefine GetHashCode.</Issue>
           </Message>
-          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '!=' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '&lt;' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyRange' should define operator '==' since it implements IComparable.</Issue>
@@ -400,7 +400,7 @@
          <Members>
           <Member Name="#CompareTo(Touchless.Vision.Camera.CameraPropertyRange)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="229">In externally visible method 'CameraPropertyRange.CompareTo(CameraPropertyRange)', validate parameter 'other' before using it.</Issue>
             </Message>
            </Messages>
@@ -409,10 +409,10 @@
         </Type>
         <Type Name="CameraPropertyValue" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideGetHashCodeOnOverridingEquals" Category="Microsoft.Usage" CheckId="CA2218" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Since 'CameraPropertyValue' redefines Equals, it should also redefine GetHashCode.</Issue>
           </Message>
-          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '!=' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '&lt;' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CameraPropertyValue' should define operator '==' since it implements IComparable.</Issue>
@@ -422,7 +422,7 @@
          <Members>
           <Member Name="#CompareTo(Touchless.Vision.Camera.CameraPropertyValue)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="109">In externally visible method 'CameraPropertyValue.CompareTo(CameraPropertyValue)', validate parameter 'other' before using it.</Issue>
             </Message>
            </Messages>
@@ -431,7 +431,7 @@
         </Type>
         <Type Name="CaptureSize" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+          <Message TypeName="OverrideMethodsOnComparableTypes" Category="Microsoft.Design" CheckId="CA1036" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
            <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '!=' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '&lt;' since it implements IComparable.</Issue>
            <Issue Name="Operator" Certainty="75" Level="Error">'CaptureSize' should define operator '==' since it implements IComparable.</Issue>
@@ -441,14 +441,14 @@
          <Members>
           <Member Name="#CompareTo(Touchless.Vision.Camera.CaptureSize)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="439">In externally visible method 'CaptureSize.CompareTo(CaptureSize)', validate parameter 'other' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera" File="Camera.cs" Line="430">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'CaptureSize.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
@@ -463,7 +463,7 @@
          <Members>
           <Member Name="#NewFrame(Touchless.Vision.Contracts.IFrameSource,Touchless.Vision.Contracts.Frame,System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Double.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="NonBreaking">
+            <Message Id="System.Double.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Camera\Configuration" File="CameraFrameSourceConfigurationElement.xaml.cs" Line="60">Because the behavior of 'double.ToString()' could vary based on the current user's locale settings, replace this call in 'CameraFrameSourceConfigurationElement.NewFrame(IFrameSource, Frame, double)' with a call to 'double.ToString(IFormatProvider)'. If the result of 'double.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
@@ -476,21 +476,21 @@
        <Types>
         <Type Name="Frame" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'Frame' because it creates members of the following IDisposable types: 'Bitmap'. If 'Frame' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#ImageData" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Contracts" File="Frame.cs" Line="44">Change 'Frame.ImageData' to return a collection or make it a method.</Issue>
             </Message>
            </Messages>
            <Accessors>
             <Accessor Name="#set_ImageData(System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="DependsOnFix">
+              <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="DependsOnFix">
                <Issue Certainty="95" Level="Warning" Path="C:\Users\mario\source\repos\digital-image-processing\WebCamWrapper\Contracts" File="Frame.cs" Line="57">Parameter 'value' of 'Frame.ImageData.set(byte[])' is never used. Remove the parameter or use it in the method body.</Issue>
               </Message>
              </Messages>
@@ -503,12 +503,12 @@
          <Members>
           <Member Name="#NewFrame" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IFrameSource, Frame, double&gt;' as an object named 'sender'.</Issue>
              <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IFrameSource, Frame, double&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
              <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IFrameSource, Frame, double&gt;'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Rename 'Action&lt;IFrameSource, Frame, double&gt;' to end in 'EventHandler'.</Issue>
             </Message>
            </Messages>
@@ -519,48 +519,48 @@
          <Members>
           <Member Name="#FrameProcessed" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;' as an object named 'sender'.</Issue>
              <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
              <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, Frame, ReadOnlyCollection&lt;DetectedObject&gt;&gt;' to end in 'EventHandler'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#NewObject" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an object named 'sender'.</Issue>
              <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
              <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' to end in 'EventHandler'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ObjectMoved" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an object named 'sender'.</Issue>
              <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
              <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' to end in 'EventHandler'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ObjectRemoved" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an object named 'sender'.</Issue>
              <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
              <Issue Name="TooMany" Certainty="95" Level="Error">Remove all but the first two parameters of 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Rename 'Action&lt;IObjectDetector, DetectedObject, Frame&gt;' to end in 'EventHandler'.</Issue>
             </Message>
            </Messages>
@@ -569,7 +569,7 @@
         </Type>
         <Type Name="ITouchlessAddIn" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-17 05:14:04Z" FixCategory="Breaking">
+          <Message Id="Touchless" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2023-12-19 12:05:49Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Touchless' in type name 'ITouchlessAddIn'.</Issue>
           </Message>
          </Messages>
