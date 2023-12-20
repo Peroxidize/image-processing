@@ -324,6 +324,8 @@ namespace image_processing {
 
         public void OnImageCaptured(Touchless.Vision.Contracts.IFrameSource frameSource, Touchless.Vision.Contracts.Frame frame, double fps) {
             _latestFrame = frame.Image;
+            // System.InvalidOperationException: 'Object is currently in use elsewhere.'
+            _toprocess = (Bitmap)_latestFrame.Clone();
             selectedPicturebox.Image = _latestFrame;
             selectedPicturebox.Invalidate();
         }
@@ -356,8 +358,6 @@ namespace image_processing {
                     Thread filterThread = new Thread(() =>
                     {
                         try {
-                            // System.InvalidOperationException: 'Object is currently in use elsewhere.'
-                            _toprocess = (Bitmap) _latestFrame.Clone();
                             filterFrames(_toprocess);
                         } finally {
                             threadSemaphore.Release();
