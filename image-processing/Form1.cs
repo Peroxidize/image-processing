@@ -17,6 +17,7 @@ namespace image_processing {
         private int camera_filter = 0;
         private SemaphoreSlim threadSemaphore = new SemaphoreSlim(3); // max threads is 3
         private static bool isDrawing = false;
+        private Bitmap _toprocess;
 
         public Form1() {
             InitializeComponent();
@@ -238,34 +239,7 @@ namespace image_processing {
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e) {
-            // TODO
-            //comboBoxCameraFilters.Items.Add("None");
-
-            //comboBoxCameraFilters.Items.Add("Copy");
-            //comboBoxCameraFilters.Items.Add("Greyscale");
-            //comboBoxCameraFilters.Items.Add("Color Inversion");
-            //comboBoxCameraFilters.Items.Add("Histogram");
-            //comboBoxCameraFilters.Items.Add("Sepia");
-            //comboBoxCameraFilters.Items.Add("Subtraction");
-
-            switch (camera_filter) {
-                case 1:
-                    break;
-                case 2:
-                    Console.WriteLine("!TEST");
-                    ImageProcessing.pointer_GreyScale((Bitmap)selectedPicturebox.Image);
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-            }
-        }
+        private void timer1_Tick(object sender, EventArgs e) {}
 
         private void saveImageToolStripMenuItem2_Click(object sender, EventArgs e) { }
 
@@ -382,7 +356,9 @@ namespace image_processing {
                     Thread filterThread = new Thread(() =>
                     {
                         try {
-                            filterFrames();
+                            // System.InvalidOperationException: 'Object is currently in use elsewhere.'
+                            _toprocess = (Bitmap) _latestFrame.Clone();
+                            filterFrames(_toprocess);
                         } finally {
                             threadSemaphore.Release();
                         }
@@ -395,8 +371,8 @@ namespace image_processing {
             }
         }
 
-        private void filterFrames() {
-            Bitmap toprocess = (Bitmap)_latestFrame.Clone();
+        private void filterFrames(Bitmap _toprocess) {
+            Bitmap toprocess = (Bitmap) _toprocess.Clone();
 
             switch (camera_filter) {
                 case 0:
