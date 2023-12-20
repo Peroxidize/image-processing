@@ -8,6 +8,3 @@
 
 image-processing/  
 ├─ dependency/  
-├─ bin/  
-│  ├─ Release/Debug/  
-│  │  ├─ image-processing.exe  
