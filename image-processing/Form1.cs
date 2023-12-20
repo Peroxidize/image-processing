@@ -404,12 +404,16 @@ namespace image_processing {
                     ImageProcessing.pointer_Subtraction(toprocess, baseImg);
                     break;
             }
-
-            // Update the UI with the processed frame
-            BeginInvoke((MethodInvoker)delegate
-            {
-                pictureBox3.Image = toprocess; // frame is now processed
-            });
+            if (IsHandleCreated) {
+                // Update the UI with the processed frame
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    pictureBox3.Image = toprocess; // frame is now processed
+                });
+                return;
+            } else {
+                // Handle the error case, or do nothing.
+            }
         }
 
         private void drawHistogram(Graphics g, Size s, int[] data, Color? BarColor = null) {
